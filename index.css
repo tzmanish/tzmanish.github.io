@@ -31,7 +31,7 @@
 body {
     margin: 40px auto;
     max-width: 650px;
-    line-height: 1.6;
+    line-height: 1.2;
     font-size: 18px;
     padding: 0 10px;
     font-family: 'Cambria';
@@ -70,6 +70,41 @@ a:hover {
 h1, h2, h3 {
     line-height: 1.2;
     font-family: 'Garamond';
+}
+
+.table-container {
+    overflow-x: auto;
+}
+.table-container th, td {
+    padding: 10px;
+    text-align: left;
+}
+.table-container tr:hover {
+    background-color: var(--overlay-bg);
+    color: var(--overlay-fg);
+}
+
+#table-skills th {
+    text-align: right;
+}
+
+#table-contact td {
+    padding: 0;
+}
+#table-contact th {
+    text-align: right;
+    padding-right: 20px;
+}
+
+.reference {
+    display: inline-block;
+    padding-right: 40px;
+    max-width: 300px;
+    vertical-align: top;
+}
+
+.reference p {
+    margin-top: 0;
 }
 
 #color-mode-toggle-button {

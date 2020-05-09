@@ -1,151 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="author" content="tzman">
-    <meta name="description" content="Manish Kushwaha is a video game enthusiast who loves to code.
-    This is his resume.">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="author" content="tzman">
+        <meta name="description" content="Manish Kushwaha is a video game enthusiast who loves to code.
+        This is his resume.">
 
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="index.css">
-    <title>Resume - Manish Kumar Kushwaha</title>
-</head>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="index.css">
+        <title>Resume - Manish Kumar Kushwaha</title>
+    </head>
 
-<body>
-    <button id="color-mode-toggle-button" onclick="toggleColorMode()">
-        <svg viewBox="0 0 200 200">
-            <circle class="icon-bg" cx="100" cy="100" r="100"/>
-            <path class="icon-fg" d="M100,185c-46.9,0-85-38.1-85-85s38.1-85,85-85"/>
-        </svg>
-    </button>
-    <button>A+</button>
-    <button>A-</button>
+    <body>
+        <button id="color-mode-toggle-button" onclick="toggleColorMode()">
+            <svg viewBox="0 0 200 200">
+                <circle class="icon-bg" cx="100" cy="100" r="100" />
+                <path class="icon-fg" d="M100,185c-46.9,0-85-38.1-85-85s38.1-85,85-85" />
+            </svg>
+        </button>
+        <button>A+</button>
+        <button>A-</button>
 
-    <h1>Manish Kumar Kushwaha</h1>
-    <h2>Software Developer, Societe Generale</h2>
-    <p>Contact No: 946522346, 9617887242<br /> Email: mkushwaha@ar.iitr.ac.in<br /> Github: <a
-            href="https://github.com/tzmanish">tzmanish</a><br /> Linkedin: <a
-            href="https://www.linkedin.com/in/tzmanish">tzmanish</a></p>
-    <h2>Area of Interest</h2>
-    <p>Software Development, Problem Solving, Data Structures &amp; Algorithm </p>
-    <h2>Education</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Year</th>
-                <th>Degree/Examination</th>
-                <th>Institution/Board</th>
-                <th>GPA/Percentage</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>2020</td>
-                <td>B.Arch.</td>
-                <td>Indian Institute of Technology Roorkee</td>
-                <td>7.269</td>
-            </tr>
-            <tr>
-                <td>2014</td>
-                <td>Twelfth</td>
-                <td>Jawahar Navodaya Vidyalaya, Surajpur (CBSE)</td>
-                <td>93.4%</td>
-            </tr>
-            <tr>
-                <td>2012</td>
-                <td>Tenth</td>
-                <td>Jawahar Navodaya Vidyalaya, Surajpur (CBSE)</td>
-                <td>9.4</td>
-            </tr>
-        </tbody>
-    </table>
-    <h2>Internship</h2>
-    <p><strong>Software Development (Python)</strong> | Auriga IT Consulting Pvt. Ltd.<br /> <em>Apr 28, 2019 - June 28,
-            2019</em></p>
-    <ul>
-        <li>The client needed a cross platform application that , whenever a new stock buy alert is posted on the
-            blogging website of Dr. Rida Morva, sends a notification with the name of stock and recommended price,
-            within two seconds of publication.</li>
-        <li>So far approximately 1200 blogs were published in total ie. there was not enough data to train an ML based
-            NLP model.</li>
-        <li>This was a paid blog, managing cookies and credentials was crucial to access the required content.</li>
-        <li>Scraping the host's website every second and bypassing it's strict security measures were the major
-            challenges before us.</li>
-    </ul>
-    <h2>Projects</h2>
-    <p><strong>Product Showcasing Website</strong> | Rohit Dinkar Architects &amp; Dinkar Associates<br /> <em>Jan 1,
-            2019 - Feb 5, 2019</em></p>
-    <ul>
-        <li>Delivered a product showcasing website with a feature rich admin dashboard and CRUD functionality in a given
-            time period of one month.</li>
-    </ul>
-    <h2>Achievements</h2>
-    <p><strong>2013</strong> (Class 12th)</p>
-    <ul>
-        <li>Winner in State level IT Exhibition Organized by NVS, Bhopal, Recognized by MHRD, Department of School
-            Education and Literacy, Government of India.</li>
-        <li>Ranked Third in Regional level Computer Science exhibition Organized by NVS, Bhopal, Recognized by MHRD,
-            Department of School Education and Literacy, Government of India.</li>
-    </ul>
-    <h2>Skills</h2>
-    <table>
-        <tbody>
-            <tr>
-                <td style="text-align: right;">Computer Languages</td>
-                <td>C/C++, Python, Javascript, SQL</td>
-            </tr>
-            <tr>
-                <td style="text-align: right;">Software Packages</td>
-                <td>Autodesk AutoCAD, SketchUp, Autodesk Revit, Adobe Illustrator, Adobe Photoshop, Microsoft Office
-                </td>
-            </tr>
-            <tr>
-                <td style="text-align: right;">Additional Courses Taken</td>
-                <td>Computer Systems and Programming, Computer Application in Architecture, Economics, Sociology,
-                    Surveying, Structural Analysis and Design - RCC and Steel, Vastu Shastra</td>
-            </tr>
-            <tr>
-                <td style="text-align: right;">Languages Known</td>
-                <td>Hindi (SRW), English (SRW)</td>
-            </tr>
-        </tbody>
-    </table>
-    <h2>Positions of Responsibility &amp; Extra Curricular</h2>
-    <p><strong>Developer at IMG</strong><br /> <em>2016 - 2017</em></p>
-    <ul>
-        <li>Rectified bugs and added new features and filters to the Institute's People Search Portal.</li>
-        <li>Converted traditional SQL queries, previously being used, into Django models and queries.</li>
-        <li>Modified the search algorithm to remove the irrelevant results and to show the results in proper order.</li>
-    </ul>
-    <p><strong>Mindsweeper - Centerstage Event, Cognizance</strong><br /> <em>2017</em></p>
-    <ul>
-        <li>The event involved all kinds of algorithmic challenges, ranging from string manipulation to dynamic
-            programming.</li>
-        <li>Our team of three got second place in the event.</li>
-    </ul>
-    <p><strong>Coordinator: Bambootech - Architecture</strong><br /> <em>2017</em></p>
-    <ul>
-        <li>Invited and hosted 37 participants from various institutions of India and adjacent countries.</li>
-        <li>Was involved in management of raw materials and equipments for the event.</li>
-        <li>Was a part of the logistics team for the event.</li>
-    </ul>
-    <p><strong>59th Annual NASA (National Association of Students of Architecture) Convention</strong><br /> <em>2016 -
-            2017</em></p>
-    <ul>
-        <li>Key member of the team which was shortlisted in top 10 for the Luis I. Kahn (LIK) Trophy.</li>
-    </ul>
-    <p><strong>Augmented Reality Workshop</strong><br /> <em>2017</em></p>
-    <ul>
-        <li>Participated in Augmented Reality Workshop held during the 59th Annual NASA (National Association of
-            Students of Architecture) Conference.</li>
-    </ul>
-    <h2>References</h2>
-    <p><strong>Divye Tela</strong><br /> Founder<br /> Auriga IT Consulting Pvt. Ltd.<br /> divye@aurigait.com</p>
-    <p><strong>Rohit Dinkar</strong><br /> Principal Architect<br /> Rohit Dinkar Architects | Dinkar Associates<br />
-        rohit@dinkars.in</p>
-</body>
+        <h1>Manish Kumar Kushwaha</h1>
+        <h3>Software Developer, Societe Generale</h3>
+        <table id="table-contact">
+            <tbody>
+                <tr>
+                    <th>Contact</td>
+                    <td>946522346</td>
+                </tr>
+                <tr>
+                    <th>Email</td>
+                    <td>mkushwaha@ar.iitr.ac.in</td>
+                </tr>
+                <tr>
+                    <th>Github</td>
+                    <td><a href="https://github.com/tzmanish">tzmanish</a></td>
+                </tr>
+                <tr>
+                    <th>Linkedin</td>
+                    <td><a href="https://www.linkedin.com/in/tzmanish">tzmanish</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-heading">Area of Interest</h2>
+        <p>Software Development, Problem Solving, Data Structures &amp; Algorithm </p>
+
+        <h2 class="section-heading">Education</h2>
+        <div class="table-container">
+            <table id="table-education">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Degree/Examination</th>
+                        <th>Institution/Board</th>
+                        <th>GPA/Percentage</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020</td>
+                        <td>B.Arch.</td>
+                        <td>Indian Institute of Technology Roorkee</td>
+                        <td>7.269</td>
+                    </tr>
+                    <tr>
+                        <td>2014</td>
+                        <td>Twelfth</td>
+                        <td>Jawahar Navodaya Vidyalaya, Surajpur (CBSE)</td>
+                        <td>93.4%</td>
+                    </tr>
+                    <tr>
+                        <td>2012</td>
+                        <td>Tenth</td>
+                        <td>Jawahar Navodaya Vidyalaya, Surajpur (CBSE)</td>
+                        <td>9.4</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-heading">Internship</h2>
+        <p>
+            <strong>Software Development (Python)</strong> | Auriga IT Consulting Pvt. Ltd.<br /> 
+            <em>Apr 28, 2019 - June 28, 2019</em>
+        </p>
+        <ul>
+            <li>The client needed a cross platform application that , whenever a new stock buy alert is posted on the
+                blogging website of Dr. Rida Morva, sends a notification with the name of stock and recommended price,
+                within two seconds of publication.</li>
+            <li>So far approximately 1200 blogs were published in total ie. there was not enough data to train an ML based
+                NLP model.</li>
+            <li>This was a paid blog, managing cookies and credentials was crucial to access the required content.</li>
+            <li>Scraping the host's website every second and bypassing it's strict security measures were the major
+                challenges before us.</li>
+        </ul>
+
+        <h2 class="section-heading">Projects</h2>
+        <p>
+            <strong>Product Showcasing Website</strong> | Rohit Dinkar Architects &amp; Dinkar Associates<br /> 
+            <em>Jan 1, 2019 - Feb 5, 2019</em>
+        </p>
+        <ul>
+            <li>Delivered a product showcasing website with a feature rich admin dashboard and CRUD functionality in a given
+                time period of one month.</li>
+        </ul>
+
+        <h2 class="section-heading">Achievements</h2>
+        <p><strong>2013</strong> (Class 12th)</p>
+        <ul>
+            <li>Winner in State level IT Exhibition Organized by NVS, Bhopal, Recognized by MHRD, Department of School
+                Education and Literacy, Government of India.</li>
+            <li>Ranked Third in Regional level Computer Science exhibition Organized by NVS, Bhopal, Recognized by MHRD,
+                Department of School Education and Literacy, Government of India.</li>
+        </ul>
+
+        <h2 class="section-heading">Skills</h2>
+        <div class="table-container">
+            <table id="table-skills">
+                <tbody>
+                    <tr>
+                        <th>Computer Languages</td>
+                        <td>C/C++, Python, Javascript, SQL</td>
+                    </tr>
+                    <tr>
+                        <th>Software Packages</td>
+                        <td>Autodesk AutoCAD, SketchUp, Autodesk Revit, Adobe Illustrator, Adobe Photoshop, Microsoft Office</td>
+                    </tr>
+                    <tr>
+                        <th>Additional Courses Taken</td>
+                        <td>Computer Systems and Programming, Computer Application in Architecture, Economics, Sociology,
+                            Surveying, Structural Analysis and Design - RCC and Steel, Vastu Shastra</td>
+                    </tr>
+                    <tr>
+                        <th>Languages Known</td>
+                        <td>Hindi (SRW), English (SRW)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h2 class="section-heading">Positions of Responsibility &amp; Extra Curricular</h2>
+        <p><strong>Developer at IMG</strong><br /> <em>2016 - 2017</em></p>
+        <ul>
+            <li>Rectified bugs and added new features and filters to the Institute's People Search Portal.</li>
+            <li>Converted traditional SQL queries, previously being used, into Django models and queries.</li>
+            <li>Modified the search algorithm to remove the irrelevant results and to show the results in proper order.</li>
+        </ul>
+        <p><strong>Mindsweeper - Centerstage Event, Cognizance</strong><br /> <em>2017</em></p>
+        <ul>
+            <li>The event involved all kinds of algorithmic challenges, ranging from string manipulation to dynamic
+                programming.</li>
+            <li>Our team of three got second place in the event.</li>
+        </ul>
+        <p><strong>Coordinator: Bambootech - Architecture</strong><br /> <em>2017</em></p>
+        <ul>
+            <li>Invited and hosted 37 participants from various institutions of India and adjacent countries.</li>
+            <li>Was involved in management of raw materials and equipments for the event.</li>
+            <li>Was a part of the logistics team for the event.</li>
+        </ul>
+        <p><strong>59th Annual NASA (National Association of Students of Architecture) Convention</strong><br /> 
+            <em>2016 - 2017</em>
+        </p>
+        <ul>
+            <li>Key member of the team which was shortlisted in top 10 for the Luis I. Kahn (LIK) Trophy.</li>
+        </ul>
+        <p><strong>Augmented Reality Workshop</strong><br /> <em>2017</em></p>
+        <ul>
+            <li>Participated in Augmented Reality Workshop held during the 59th Annual NASA (National Association of
+                Students of Architecture) Conference.</li>
+        </ul>
+
+        <h2 class="section-heading">References</h2>
+        <div class="reference">
+            <p>
+                <strong>Divye Tela</strong>
+                <br /> Founder
+                <br /> Auriga IT Consulting Pvt. Ltd.
+                <br /> divye@aurigait.com
+            </p>
+        </div>
+        <div class="reference">
+            <p><strong>Rohit Dinkar</strong>
+                <br /> Principal Architect
+                <br /> Rohit Dinkar Architects | Dinkar Associates
+                <br /> rohit@dinkars.in
+            </p>
+        </div>
+    </body>
 <script src="index.js"></script>
 
 </html>
