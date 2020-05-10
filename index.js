@@ -21,3 +21,21 @@ function toggleColorMode(){
         localStorage.setItem("color-mode", "light")
     }
 }
+
+function createLinks(){
+    const sections = document.querySelectorAll(".section-heading");
+    const container = document.getElementById("goto-section");
+    for(let i = 0; i < sections.length; i++){
+        const section = sections[i];
+        const id = "section"+(i+1);
+        section.setAttribute("id", id);
+        let button = document.createElement("button");
+        button.innerHTML = section.textContent;
+        button.onclick = function (){
+            const hashVal = '#'+id;
+            document.querySelector(hashVal).scrollIntoView({behavior: 'smooth'});
+            history.pushState(null, null, hashVal);
+        };
+        container.appendChild(button);
+    }
+}

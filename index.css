@@ -24,8 +24,12 @@
     --highlight: springgreen;
     --highlight-text: black;
 
-    --link: lemonchiffon;
-    --link-visited: lightgreen;
+    --link: lightgreen;
+    --link-visited: lemonchiffon;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -55,7 +59,7 @@ a:hover {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 ::-webkit-scrollbar-track {
     background: var(--overlay-bg);
@@ -75,7 +79,7 @@ h1, h2, h3 {
 .table-container {
     overflow-x: auto;
 }
-.table-container th, td {
+.table-container th, .table-container td {
     padding: 10px;
     text-align: left;
 }
@@ -88,9 +92,6 @@ h1, h2, h3 {
     text-align: right;
 }
 
-#table-contact td {
-    padding: 0;
-}
 #table-contact th {
     text-align: right;
     padding-right: 20px;
@@ -128,3 +129,12 @@ h1, h2, h3 {
 #color-mode-toggle-button .icon-fg {
     fill: var(--text);
 }
+
+/* #goto-section {
+    max-width: 200px;
+    background-color: red;
+}
+
+#goto-section button {
+
+} */
