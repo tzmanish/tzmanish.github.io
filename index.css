@@ -147,6 +147,7 @@ h1, h2, h3 {
 
 #goto-section button {
     background-color: var(--text);
+    color: var(--background);
     border: none;
     border-radius: 50%;
     padding: 5px;
@@ -157,7 +158,16 @@ h1, h2, h3 {
 
 @media screen and (max-width: 800px) {
     #goto-section {
-      display: none;
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: space-between;
+        position: fixed;
+        bottom: 0;
+        overflow: auto;
     }
-    #main-content {margin: 0px auto;}
+    #main-content {
+        margin: 0px auto;
+        padding-bottom: 100px;
+    }
   }
