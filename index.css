@@ -33,7 +33,7 @@
 }
 
 body {
-    margin: 0px auto;
+    margin: 0 auto;
     line-height: 1.2;
     font-size: 18px;
     font-family: 'Cambria';
@@ -132,7 +132,7 @@ h1, h2, h3 {
 
 #main-content {
     max-width: 650px;
-    padding: 0 10px;
+    padding: 30vh 10px;
     margin: 0 auto 0 100px;
 }
 
@@ -164,10 +164,11 @@ h1, h2, h3 {
         justify-content: space-between;
         position: fixed;
         bottom: 0;
-        overflow: auto;
+        overflow-x: auto;
+        overflow-y: hidden;
     }
     #main-content {
-        margin: 0px auto;
+        margin: 0 auto;
         padding-bottom: 100px;
     }
   }

@@ -22,7 +22,7 @@ function toggleColorMode(){
     }
 }
 
-function createLinks(){
+(function(){
     const sections = document.querySelectorAll(".section-heading");
     const container = document.getElementById("goto-section");
     for(let i = 0; i < sections.length; i++){
@@ -30,7 +30,7 @@ function createLinks(){
         const id = "section"+(i+1);
         section.setAttribute("id", id);
         let button = document.createElement("button");
-        button.innerHTML = section.textContent;
+        button.innerHTML = section.textContent[0];
         button.onclick = function (){
             const hashVal = '#'+id;
             document.querySelector(hashVal).scrollIntoView({behavior: 'smooth'});
@@ -38,4 +38,4 @@ function createLinks(){
         };
         container.appendChild(button);
     }
-}
+})();
