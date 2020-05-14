@@ -22,7 +22,7 @@ function toggleColorMode(){
     }
 }
 
-(function(){
+window.onload = function(){
     const sections = document.querySelectorAll(".section-heading");
     const container = document.getElementById("goto-section");
     for(let i = 0; i < sections.length; i++){
@@ -38,4 +38,4 @@ function toggleColorMode(){
         };
         container.appendChild(button);
     }
-})();
+};
