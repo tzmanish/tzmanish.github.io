@@ -1,7 +1,5 @@
 body {
     margin: 0 auto;
-    padding: 0 10px;
-    max-width: 1200px;
 
     font-family: $font-family;
     font-size: $font-size;
@@ -12,14 +10,16 @@ body {
     color: var(--fg);
 }
 
-a:link {
-    color: var(--link);
-}
-a:visited {
-    color: var(--link-visited);
-}
-a:hover {
-    color: var(--link-hover);
+a{
+    &:link {
+        color: var(--link);
+    }
+    &:visited {
+        color: var(--link-visited);
+    }
+    &:hover {
+        color: var(--link-hover);
+    }
 }
 
 ::selection {
@@ -44,102 +44,10 @@ h3{
     font-family: $font-family;
     font-size: $font-size-h3;
     line-height: $line-height-h3;
-
-}
-
-.table-container {
-    overflow-x: auto;
-}
-.table-container th, .table-container td {
-    padding: 10px;
-    text-align: left;
-}
-.table-container tr:hover {
-    background-color: var(--highlight-bg);
-    color: var(--highlight-fg);
-}
-
-#table-skills th {
-    text-align: right;
-}
-
-#table-contact th {
-    text-align: right;
-    padding-right: 20px;
-}
-
-.reference {
-    display: inline-block;
-    padding-right: 40px;
-    max-width: 300px;
-    vertical-align: top;
-}
-
-.reference p {
-    margin-top: 0;
-}
-
-#color-mode-toggle-button {
-    background-color: var(--fg);
-    border: none;
-    padding: 5px;
-    width: 40px;
-    height: 40px;
-    display: none;
-}
-#color-mode-toggle-button:hover .icon-fg{
-    fill: var(--highlight-bg);
-}
-#color-mode-toggle-button svg {
-    width: 30px;
-    height: 30px;
-}
-#color-mode-toggle-button .icon-bg {
-    fill: var(--bg);
-}
-#color-mode-toggle-button .icon-fg {
-    fill: var(--fg);
 }
 
 #main-content {
-    max-width: 650px;
-    padding: 30vh 10px;
-    margin: 0 auto 0 100px;
-}
-
-#goto-section {
-    width: 100px;
-    margin: 0;
-    padding: 0; 
-    position: fixed;
-    height: 100%;
-    display: grid;
-}
-
-#goto-section button {
-    background-color: var(--fg);
-    color: var(--bg);
-    border: none;
-    border-radius: 50%;
-    padding: 5px;
-    width: 40px;
-    height: 40px;
+    max-width: 800px;
+    padding: 30vh 2rem;
     margin: 0 auto;
 }
-
-@media screen and (max-width: 800px) {
-    #goto-section {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        justify-content: space-between;
-        position: fixed;
-        bottom: 0;
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
-    #main-content {
-        margin: 0 auto;
-        padding-bottom: 100px;
-    }
-  }

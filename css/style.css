@@ -5,6 +5,7 @@
   --fg: rgba(0, 0, 0, 0.8);
   --highlight-bg: red;
   --highlight-fg: #fff;
+  --toggle-btn: #d8d8b6;
   --link: blue;
   --link-hover: red;
   --link-visited: mediumvioletred;
@@ -12,7 +13,8 @@
 
 :root[color-mode="dark"] {
   --bg: rgba(0, 0, 0, 0.8);
-  --fg: rgba(255, 255, 255, 0.8);
+  --fg: #fff;
+  --toggle-btn: yellow;
   --highlight-bg: springgreen;
   --highlight-fg: #000;
   --link: lightgreen;
@@ -22,8 +24,6 @@
 
 body {
   margin: 0 auto;
-  padding: 0 10px;
-  max-width: 1200px;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -73,6 +73,47 @@ h3 {
   line-height: 1.8rem;
 }
 
+#main-content {
+  max-width: 800px;
+  padding: 30vh 2rem;
+  margin: 0 auto;
+}
+
+nav {
+  position: fixed;
+  z-index: 20;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+nav #color-mode-toggle-button {
+  cursor: pointer;
+  color: var(--fg);
+}
+
+nav #color-mode-toggle-button:hover {
+  color: var(--toggle-btn);
+}
+
+nav #color-mode-toggle-button i {
+  display: none;
+}
+
 .table-container {
   overflow-x: auto;
 }
@@ -82,11 +123,6 @@ h3 {
   text-align: left;
 }
 
-.table-container tr:hover {
-  background-color: var(--highlight-bg);
-  color: var(--highlight-fg);
-}
-
 #table-skills th {
   text-align: right;
 }
@@ -94,90 +130,5 @@ h3 {
 #table-contact th {
   text-align: right;
   padding-right: 20px;
-}
-
-.reference {
-  display: inline-block;
-  padding-right: 40px;
-  max-width: 300px;
-  vertical-align: top;
-}
-
-.reference p {
-  margin-top: 0;
-}
-
-#color-mode-toggle-button {
-  background-color: var(--fg);
-  border: none;
-  padding: 5px;
-  width: 40px;
-  height: 40px;
-  display: none;
-}
-
-#color-mode-toggle-button:hover .icon-fg {
-  fill: var(--highlight-bg);
-}
-
-#color-mode-toggle-button svg {
-  width: 30px;
-  height: 30px;
-}
-
-#color-mode-toggle-button .icon-bg {
-  fill: var(--bg);
-}
-
-#color-mode-toggle-button .icon-fg {
-  fill: var(--fg);
-}
-
-#main-content {
-  max-width: 650px;
-  padding: 30vh 10px;
-  margin: 0 auto 0 100px;
-}
-
-#goto-section {
-  width: 100px;
-  margin: 0;
-  padding: 0;
-  position: fixed;
-  height: 100%;
-  display: -ms-grid;
-  display: grid;
-}
-
-#goto-section button {
-  background-color: var(--fg);
-  color: var(--bg);
-  border: none;
-  border-radius: 50%;
-  padding: 5px;
-  width: 40px;
-  height: 40px;
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 800px) {
-  #goto-section {
-    width: 100%;
-    height: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    position: fixed;
-    bottom: 0;
-    overflow-x: auto;
-    overflow-y: hidden;
-  }
-  #main-content {
-    margin: 0 auto;
-    padding-bottom: 100px;
-  }
 }
 /*# sourceMappingURL=style.css.map */

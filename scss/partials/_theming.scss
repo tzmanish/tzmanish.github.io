@@ -5,6 +5,8 @@
     --highlight-bg: #{$color-primary-light};
     --highlight-fg: #{$color-white};
 
+    --toggle-btn: #{$color-toggle-btn-light};
+    
     --link: #{$color-secondary-light};
     --link-hover: #{$color-primary-light};
     --link-visited: #{$color-tertiary-light};
@@ -12,7 +14,9 @@
 
 :root[color-mode="dark"] {
     --bg: #{$color-dark-gray};
-    --fg: #{$color-light-gray};
+    --fg: #{$color-white};
+
+    --toggle-btn: #{$color-toggle-btn-dark};
 
     --highlight-bg: #{$color-primary-dark};
     --highlight-fg: #{$color-black};

@@ -1,0 +1,24 @@
+nav{
+    position: fixed;
+    z-index: 20;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    #color-mode-toggle-button {
+        cursor: pointer;
+        color: var(--fg);
+    
+        &:hover{
+            color: var(--toggle-btn);
+        }
+        i{
+            display: none;
+        }
+    }
+}

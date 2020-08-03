@@ -12,24 +12,20 @@
     <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap-grid.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Resume - Manish Kumar Kushwaha</title>
+    <title>Manish Kushwaha</title>
 </head>
 
 <body>
-    <!-- <div id="goto-section"></div> -->
+    <nav>
+        <a href="#"><h2>M</h2></a>
+        <div id="color-mode-toggle-button" onclick="toggleColorMode()">
+            <i class="fas fa-moon fa-fw" id="icon-light"></i>
+            <i class="fas fa-lightbulb fa-rotate-180 fa-fw" id="icon-dark"></i>
+        </div>
+    </nav>
 
     <div id="main-content">
-        <div>
-            <button id="color-mode-toggle-button" onclick="toggleColorMode()">
-                <svg viewBox="0 0 200 200">
-                    <circle class="icon-bg" cx="100" cy="100" r="100" />
-                    <path class="icon-fg" d="M100,185c-46.9,0-85-38.1-85-85s38.1-85,85-85" />
-                </svg>
-            </button>
-        </div>
-
-        <h1>Manish Kumar Kushwaha</h1>
-        <h3>Software Engineer, Societe Generale</h3>
+        <h1>Manish Kushwaha</h1>
         <table id="table-contact">
             <tbody>
                 <tr>
@@ -181,20 +177,24 @@
         </ul>
 
         <h2 class="section-heading">References</h2>
-        <div class="reference">
-            <p>
-                <strong>Divye Tela</strong>
-                <br /> Founder
-                <br /> Auriga IT Consulting Pvt. Ltd.
-                <br /> divye@aurigait.com
-            </p>
-        </div>
-        <div class="reference">
-            <p><strong>Rohit Dinkar</strong>
-                <br /> Principal Architect
-                <br /> Rohit Dinkar Architects | Dinkar Associates
-                <br /> rohit@dinkars.in
-            </p>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-12">
+                    <p>
+                        <strong>Divye Tela</strong>
+                        <br /> Founder
+                        <br /> Auriga IT Consulting Pvt. Ltd.
+                        <br /> divye@aurigait.com
+                    </p>
+                </div>
+                <div class="col-md-6 col-12">
+                    <p><strong>Rohit Dinkar</strong>
+                        <br /> Principal Architect
+                        <br /> Rohit Dinkar Architects | Dinkar Associates
+                        <br /> rohit@dinkars.in
+                    </p>
+                </div>
+            </div>
         </div>
     </div>
     <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
