@@ -1,6 +1,6 @@
 "use strict"
 
-function isDark(){
+function isDarkPreferred(){
     return (
         localStorage.getItem("color-mode") == "dark"//check preference
         || (
@@ -10,14 +10,25 @@ function isDark(){
     );
 }
 
-if(window.CSS && CSS.supports("color", "var(--bg)")){   //if mode toggle supported
-    if(isDark()) {
-        document.documentElement.setAttribute("color-mode", "dark");
+function setColorModeIcon(mode){
+    if(mode == "dark"){
+        document.getElementById("icon-light").style.display = "flex";
+        document.getElementById("icon-dark").style.display = "none";
+    }
+    else{
         document.getElementById("icon-dark").style.display = "flex";
+        document.getElementById("icon-light").style.display = "none";
+    }
+}
+
+if(window.CSS && CSS.supports("color", "var(--bg)")){   //if mode toggle supported
+    if(isDarkPreferred()) {
+        document.documentElement.setAttribute("color-mode", "dark");
+        setColorModeIcon("dark");
     } 
     else {
         document.documentElement.setAttribute("color-mode", "light");
-        document.getElementById("icon-light").style.display = "flex";
+        setColorModeIcon("light")
     }
 }
 
@@ -27,13 +38,11 @@ function toggleColorMode(){
     if(mode == "light"){
         document.documentElement.setAttribute("color-mode", "dark");
         localStorage.setItem("color-mode", "dark");
-        document.getElementById("icon-dark").style.display = "flex";
-        document.getElementById("icon-light").style.display = "none";
+        setColorModeIcon("dark");
     } 
     else {
         document.documentElement.setAttribute("color-mode", "light");
         localStorage.setItem("color-mode", "light");
-        document.getElementById("icon-light").style.display = "flex";
-        document.getElementById("icon-dark").style.display = "none";
+        setColorModeIcon("light")
     }
 }
