@@ -1,0 +1,34 @@
+//colors
+$color-white: #fff;
+$color-black: #000;
+$color-light-gray: fade-out($color-white, 0.20);
+$color-dark-gray: fade-out($color-black, 0.20);
+
+$color-primary-light: red;
+$color-secondary-light: blue;
+$color-tertiary-light: mediumvioletred;
+
+$color-primary-dark: springgreen;
+$color-secondary-dark: lightgreen;
+$color-tertiary-dark: lemonchiffon;
+
+//fonts
+$font-family: 'Raleway', sans-serif;
+$font-light: 500;
+$font-medium: 600;
+$font-bold: 700;
+
+$font-family-heading: 'Montserrat', sans-serif;
+$font-light-heading: 200;
+$font-medium-heading: 300;
+$font-bold-heading: 400;
+
+$font-size: 1rem;
+$line-height: $font-size*1.5;
+
+$font-size-h1: $font-size*4;
+$line-height-h1: $font-size-h1*1.5;
+$font-size-h2: $font-size*1.5;
+$line-height-h2: $font-size-h2*1.5;
+$font-size-h3: $font-size*1.2;
+$line-height-h3: $font-size-h3*1.5;
