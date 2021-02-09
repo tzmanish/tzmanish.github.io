@@ -3,11 +3,11 @@
 :root[color-mode="light"] {
   --bg: #fff;
   --fg: rgba(0, 0, 0, 0.8);
-  --highlight-bg: red;
+  --highlight-bg: #FF4444;
   --highlight-fg: #fff;
   --toggle-btn: #d8d8b6;
   --link: blue;
-  --link-hover: red;
+  --link-hover: #FF4444;
   --link-visited: mediumvioletred;
 }
 
@@ -30,18 +30,6 @@ body {
   font-weight: 600;
   background: var(--bg);
   color: var(--fg);
-}
-
-a:link {
-  color: var(--link);
-}
-
-a:visited {
-  color: var(--link-visited);
-}
-
-a:hover {
-  color: var(--link-hover);
 }
 
 ::-moz-selection {
@@ -79,6 +67,18 @@ h3 {
   margin: 0 auto;
 }
 
+#main-content a:link {
+  color: var(--link);
+}
+
+#main-content a:visited {
+  color: var(--link-visited);
+}
+
+#main-content a:hover {
+  color: var(--link-hover);
+}
+
 nav {
   position: fixed;
   z-index: 20;
@@ -104,6 +104,8 @@ nav {
 nav #color-mode-toggle-button {
   cursor: pointer;
   color: var(--fg);
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
 
 nav #color-mode-toggle-button:hover {
@@ -114,23 +116,23 @@ nav #color-mode-toggle-button i {
   display: none;
 }
 
-#logo .logo-primary {
+nav #logo .logo-primary {
   fill: var(--fg);
-  -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#logo .logo-secondary {
+nav #logo .logo-secondary {
   fill: var(--fg);
-  -webkit-transition: all 0.5s ease-in;
-  transition: all 0.5s ease-in;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
-#logo:hover .logo-primary {
+nav #logo:hover .logo-primary {
   fill: var(--highlight-bg);
 }
 
-#logo:hover .logo-secondary {
+nav #logo:hover .logo-secondary {
   rx: 50%;
 }
 

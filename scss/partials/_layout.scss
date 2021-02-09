@@ -10,18 +10,6 @@ body {
     color: var(--fg);
 }
 
-a{
-    &:link {
-        color: var(--link);
-    }
-    &:visited {
-        color: var(--link-visited);
-    }
-    &:hover {
-        color: var(--link-hover);
-    }
-}
-
 ::selection {
     background: var(--highlight-bg);
     color: var(--highlight-fg);
@@ -50,4 +38,16 @@ h3{
     max-width: 800px;
     padding: 30vh 2rem;
     margin: 0 auto;
+    
+    a{
+        &:link {
+            color: var(--link);
+        }
+        &:visited {
+            color: var(--link-visited);
+        }
+        &:hover {
+            color: var(--link-hover);
+        }
+    }
 }

@@ -13,6 +13,7 @@ nav{
     #color-mode-toggle-button {
         cursor: pointer;
         color: var(--fg);
+        transition: all 0.4s;
     
         &:hover{
             color: var(--toggle-btn);
@@ -21,23 +22,22 @@ nav{
             display: none;
         }
     }
-}
-
-#logo{
-    .logo-primary {
-        fill: var(--fg);
-        transition: all 0.5s ease-out;
-    }
-    .logo-secondary {
-        fill: var(--fg);
-        transition: all 0.5s ease-in;
-    }
-    &:hover{
+    #logo{
         .logo-primary {
-            fill: var(--highlight-bg);
+            fill: var(--fg);
+            transition: all 0.5s;
         }
         .logo-secondary {
-            rx: 50%;
+            fill: var(--fg);
+            transition: all 0.5s;
+        }
+        &:hover{
+            .logo-primary {
+                fill: var(--highlight-bg);
+            }
+            .logo-secondary {
+                rx: 50%;
+            }
         }
     }
 }
