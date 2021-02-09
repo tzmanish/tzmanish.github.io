@@ -114,6 +114,26 @@ nav #color-mode-toggle-button i {
   display: none;
 }
 
+#logo .logo-primary {
+  fill: var(--fg);
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+#logo .logo-secondary {
+  fill: var(--fg);
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
+}
+
+#logo:hover .logo-primary {
+  fill: var(--highlight-bg);
+}
+
+#logo:hover .logo-secondary {
+  rx: 50%;
+}
+
 .table-container {
   overflow-x: auto;
 }
