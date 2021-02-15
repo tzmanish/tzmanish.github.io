@@ -2,6 +2,7 @@
     overflow-x: auto;
 
     th, td {
+        word-break: keep-all;
         padding: 10px;
         text-align: left;
     }

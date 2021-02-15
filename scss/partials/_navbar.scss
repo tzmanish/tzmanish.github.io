@@ -9,34 +9,40 @@ nav{
     top: 0;
     right: 0;
     left: 0;
+    background: linear-gradient(var(--bg) 50%, transparent);
 
     #color-mode-toggle-button {
         cursor: pointer;
+        font-size: 1.2rem;
         color: var(--fg);
-        transition: all 0.4s;
-    
+        transition: color 0.5s;
+        
         &:hover{
             color: var(--toggle-btn);
-        }
-        i{
-            display: none;
+            transition: color 0.2s;
         }
     }
     #logo{
-        .logo-primary {
-            fill: var(--fg);
-            transition: all 0.5s;
-        }
-        .logo-secondary {
-            fill: var(--fg);
-            transition: all 0.5s;
+        svg{
+            width: 2.5rem;
+            height: auto;
+            .logo-primary {
+                fill: var(--fg);
+                transition: fill .5s;
+            }
+            .logo-secondary {
+                fill: var(--fg);
+                transition: rx .2s, fill .5s;
+            }
         }
         &:hover{
             .logo-primary {
                 fill: var(--highlight-bg);
+                transition: fill .2s;
             }
             .logo-secondary {
                 rx: 50%;
+                transition: rx .2s;
             }
         }
     }
