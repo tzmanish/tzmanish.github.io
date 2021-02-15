@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap");
 :root[color-mode="light"] {
   --bg: #fff;
-  --fg: rgba(0, 0, 0, 0.8);
+  --fg: #333333;
   --highlight-bg: #FF4444;
   --highlight-fg: #fff;
   --toggle-btn: #d8d8b6;
@@ -12,7 +12,7 @@
 }
 
 :root[color-mode="dark"] {
-  --bg: rgba(0, 0, 0, 0.8);
+  --bg: #333333;
   --fg: #fff;
   --toggle-btn: yellow;
   --highlight-bg: springgreen;
@@ -28,6 +28,10 @@ body {
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: 600;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
   background: var(--bg);
   color: var(--fg);
 }
@@ -79,6 +83,10 @@ h3 {
   color: var(--link-hover);
 }
 
+.hidden {
+  display: none;
+}
+
 nav {
   position: fixed;
   z-index: 20;
@@ -99,41 +107,51 @@ nav {
   top: 0;
   right: 0;
   left: 0;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, var(--bg)), to(transparent));
+  background: linear-gradient(var(--bg) 50%, transparent);
 }
 
 nav #color-mode-toggle-button {
   cursor: pointer;
+  font-size: 1.2rem;
   color: var(--fg);
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
 }
 
 nav #color-mode-toggle-button:hover {
   color: var(--toggle-btn);
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
 }
 
-nav #color-mode-toggle-button i {
-  display: none;
+nav #logo svg {
+  width: 2.5rem;
+  height: auto;
 }
 
-nav #logo .logo-primary {
+nav #logo svg .logo-primary {
   fill: var(--fg);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: fill .5s;
+  transition: fill .5s;
 }
 
-nav #logo .logo-secondary {
+nav #logo svg .logo-secondary {
   fill: var(--fg);
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: rx .2s, fill .5s;
+  transition: rx .2s, fill .5s;
 }
 
 nav #logo:hover .logo-primary {
   fill: var(--highlight-bg);
+  -webkit-transition: fill .2s;
+  transition: fill .2s;
 }
 
 nav #logo:hover .logo-secondary {
   rx: 50%;
+  -webkit-transition: rx .2s;
+  transition: rx .2s;
 }
 
 .table-container {
@@ -141,6 +159,7 @@ nav #logo:hover .logo-secondary {
 }
 
 .table-container th, .table-container td {
+  word-break: keep-all;
   padding: 10px;
   text-align: left;
 }

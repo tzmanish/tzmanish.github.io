@@ -5,6 +5,8 @@ body {
     font-size: $font-size;
     line-height: $line-height;
     font-weight: $font-medium;
+    word-break: break-word;
+    hyphens: auto;
 
     background: var(--bg);
     color: var(--fg);
@@ -50,4 +52,8 @@ h3{
             color: var(--link-hover);
         }
     }
+}
+
+.hidden{
+    display: none;
 }
