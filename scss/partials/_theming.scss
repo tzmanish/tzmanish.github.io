@@ -1,27 +1,25 @@
 :root[color-mode="light"] {
-    --bg: #{$color-white};
-    --fg: #{$color-dark-gray};
-
-    --highlight-bg: #{$color-primary-light};
-    --highlight-fg: #{$color-white};
-
-    --toggle-btn: #{$color-toggle-btn-light};
+    --bg: #F6F0E4;
+    --bg-welcome: #B8DFDC;
+    --fg: #474749;
     
-    --link: #{$color-secondary-light};
-    --link-hover: #{$color-primary-light};
-    --link-visited: #{$color-tertiary-light};
+    --highlight-bg: #BA472B;
+    --highlight-fg: #F6F0E4;
+    
+    --toggle-btn: #E9E3D5;
+    
+    --link: #0645AD;
 }
 
 :root[color-mode="dark"] {
-    --bg: #{$color-dark-gray};
-    --fg: #{$color-white};
+    --bg: #33383B;
+    --bg-welcome: #282C2E;
+    --fg: #FFFDF7;
 
-    --toggle-btn: #{$color-toggle-btn-dark};
+    --toggle-btn: #D3D0CB;
 
-    --highlight-bg: #{$color-primary-dark};
-    --highlight-fg: #{$color-black};
+    --highlight-bg: #FFE900;
+    --highlight-fg: #33383B;
 
-    --link: #{$color-secondary-dark};
-    --link-hover: #{$color-primary-dark};
-    --link-visited: #{$color-tertiary-dark};
+    --link: #8ab4f8;
 }

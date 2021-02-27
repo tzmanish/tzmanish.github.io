@@ -4,7 +4,7 @@ body {
     font-family: $font-family;
     font-size: $font-size;
     line-height: $line-height;
-    font-weight: $font-medium;
+    font-weight: medium;
     word-break: break-word;
     hyphens: auto;
 
@@ -21,7 +21,7 @@ h1{
     font-family: $font-family-heading;
     font-size: $font-size-h1;
     line-height: $line-height-h1;
-    font-weight: $font-medium-heading;
+    font-weight: thin;
 }
 
 h2{
@@ -42,14 +42,12 @@ h3{
     margin: 0 auto;
     
     a{
-        &:link {
+        text-decoration: none;
+        &:link,&:visited {
             color: var(--link);
         }
-        &:visited {
-            color: var(--link-visited);
-        }
         &:hover {
-            color: var(--link-hover);
+            text-decoration: underline;
         }
     }
 }

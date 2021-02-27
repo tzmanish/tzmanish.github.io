@@ -1,0 +1,33 @@
+#welcome{
+    height: 100vh;
+    background-color: var(--bg-welcome);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    p{
+        font-size: 5em;
+        font-family: 'Libre Barcode 39 Extended Text', cursive;
+        text-align: center;
+        line-height: 1.2;
+        .phase1{
+            transition: 1s;
+            color: var(--highlight-bg);
+        }
+        .phase2{
+            transition: 1s;
+            color: var(--highlight-bg);
+            font-size: 0%;
+            opacity: 0;
+        }
+        &:hover{
+            .phase1{
+                font-size: 0%;
+                opacity: 0;
+            }
+            .phase2{
+                font-size: 100%;
+                opacity: 1;
+            }
+        }
+    }
+}

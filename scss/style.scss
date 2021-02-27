@@ -1,7 +1,17 @@
-//font-family: 'Montserrat', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400&display=swap');
-//font-family: 'Raleway', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500;600;700&display=swap');
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../vendor/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
+    font-weight: thin;
+}
+@font-face {
+    font-family: 'Libre Barcode 39 Extended Text';
+    src: url('../vendor/fonts/Libre_Barcode_39_Extended_Text/LibreBarcode39ExtendedText-Regular.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Raleway';
+    src: url('../vendor/fonts/Raleway/static/Raleway-Medium.ttf') format('truetype');
+    font-weight: medium;
+}
 
 
 @import "modules/_variables.scss";
@@ -11,3 +21,4 @@
 @import "partials/_layout.scss";
 @import "partials/_navbar.scss";
 @import "partials/_table.scss";
+@import "partials/_welcome.scss"
