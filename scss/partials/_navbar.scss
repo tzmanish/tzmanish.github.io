@@ -9,7 +9,11 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    pointer-events: none;
 
+    *{
+        pointer-events: auto;
+    }
     #color-mode-toggle-button {
         cursor: pointer;
         font-size: 1.2rem;
