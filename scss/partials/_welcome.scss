@@ -10,16 +10,16 @@
         text-align: center;
         line-height: 1.2;
         .phase1{
-            transition: 1s;
+            transition: .2s;
             color: var(--highlight-bg);
         }
         .phase2{
-            transition: 1s;
+            transition: .2s;
             color: var(--highlight-bg);
             font-size: 0%;
             opacity: 0;
         }
-        &:hover{
+        &:hover, &:active{
             .phase1{
                 font-size: 0%;
                 opacity: 0;
