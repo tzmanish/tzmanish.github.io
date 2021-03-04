@@ -4,11 +4,13 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    
     p{
         font-size: 5em;
         font-family: 'Libre Barcode 39 Extended Text', cursive;
         text-align: center;
         line-height: 1.2;
+        
         .phase1{
             transition: .2s;
             color: var(--highlight-bg);
@@ -19,7 +21,7 @@
             font-size: 0%;
             opacity: 0;
         }
-        &:hover, &:active{
+        @include hover {
             .phase1{
                 font-size: 0%;
                 opacity: 0;

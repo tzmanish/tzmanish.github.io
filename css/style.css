@@ -134,7 +134,13 @@ nav #color-mode-toggle-button {
   transition: text-shadow .2s;
 }
 
-nav #color-mode-toggle-button:hover, nav #color-mode-toggle-button:active {
+@media (hover: hover) and (pointer: fine) {
+  nav #color-mode-toggle-button:hover {
+    text-shadow: 0 0 1em var(--highlight-bg);
+  }
+}
+
+nav #color-mode-toggle-button:active {
   text-shadow: 0 0 1em var(--highlight-bg);
 }
 
@@ -155,13 +161,26 @@ nav #logo svg .logo-secondary {
   transition: rx .2s, fill .5s;
 }
 
-nav #logo:hover .logo-primary, nav #logo:active .logo-primary {
+@media (hover: hover) and (pointer: fine) {
+  nav #logo:hover .logo-primary {
+    fill: var(--highlight-bg);
+    -webkit-transition: fill .2s;
+    transition: fill .2s;
+  }
+  nav #logo:hover .logo-secondary {
+    rx: 50%;
+    -webkit-transition: rx .1s;
+    transition: rx .1s;
+  }
+}
+
+nav #logo:active .logo-primary {
   fill: var(--highlight-bg);
   -webkit-transition: fill .2s;
   transition: fill .2s;
 }
 
-nav #logo:hover .logo-secondary, nav #logo:active .logo-secondary {
+nav #logo:active .logo-secondary {
   rx: 50%;
   -webkit-transition: rx .1s;
   transition: rx .1s;
@@ -221,12 +240,23 @@ nav #logo:hover .logo-secondary, nav #logo:active .logo-secondary {
   opacity: 0;
 }
 
-#welcome p:hover .phase1, #welcome p:active .phase1 {
+@media (hover: hover) and (pointer: fine) {
+  #welcome p:hover .phase1 {
+    font-size: 0%;
+    opacity: 0;
+  }
+  #welcome p:hover .phase2 {
+    font-size: 100%;
+    opacity: 1;
+  }
+}
+
+#welcome p:active .phase1 {
   font-size: 0%;
   opacity: 0;
 }
 
-#welcome p:hover .phase2, #welcome p:active .phase2 {
+#welcome p:active .phase2 {
   font-size: 100%;
   opacity: 1;
 }
