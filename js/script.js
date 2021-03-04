@@ -54,5 +54,12 @@ class ThemeManager{
         }
     }
 }
-
 const themeManager = new ThemeManager();
+
+var scrollTop = 0;
+window.addEventListener("scroll", function(){
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    document.getElementById("nav-bar").classList.toggle("no-background", scrollTop <= height);
+});
+
