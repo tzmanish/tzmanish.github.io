@@ -16,6 +16,8 @@ class ThemeManager{
             document.documentElement.setAttribute("color-mode", "light");
             this.setColorModeIcon("light");
         }
+
+        this.setMetaThemeColor();
     }
 
     isDarkPreferred(){
@@ -52,6 +54,15 @@ class ThemeManager{
             localStorage.setItem("color-mode", "light");
             this.setColorModeIcon("light")
         }
+
+        this.setMetaThemeColor();
+    }
+
+    setMetaThemeColor(){
+        document.querySelector('meta[name="theme-color"]').setAttribute(
+            'content',  
+            getComputedStyle(document.documentElement).getPropertyValue('--bg-welcome')
+        );
     }
 }
 const themeManager = new ThemeManager();
@@ -59,7 +70,13 @@ const themeManager = new ThemeManager();
 var scrollTop = 0;
 window.addEventListener("scroll", function(){
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    document.getElementById("nav-bar").classList.toggle("no-background", scrollTop <= height);
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    document.getElementById("nav-bar").classList.toggle("no-background", scrollTop <= windowHeight);
+    document.getElementById("down-arrow").classList.toggle("hidden", scrollTop >= windowHeight/3);
+});
+
+document.getElementById("down-arrow").addEventListener("click", function(){
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    window.scrollBy(0, windowHeight*2/3);
 });
 

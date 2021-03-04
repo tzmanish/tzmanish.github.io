@@ -33,6 +33,10 @@
   --link: #8ab4f8;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
   font-family: "Raleway", sans-serif;
@@ -236,6 +240,13 @@ nav.no-background * {
   padding-right: 20px;
 }
 
+#table-education th, #table-education td {
+  -webkit-user-select: all;
+     -moz-user-select: all;
+      -ms-user-select: all;
+          user-select: all;
+}
+
 #welcome {
   height: 100vh;
   background-color: var(--bg-welcome);
@@ -295,5 +306,77 @@ nav.no-background * {
 #welcome p:active .phase2 {
   font-size: 100%;
   opacity: 1;
+}
+
+#welcome #down-arrow {
+  position: absolute;
+  cursor: pointer;
+  top: 90vh;
+  -webkit-animation: bounce 2s cubic-bezier(0.28, 0.84, 0.42, 1) 3s infinite;
+          animation: bounce 2s cubic-bezier(0.28, 0.84, 0.42, 1) 3s infinite;
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+}
+
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(10px);
+            transform: scale(0.9, 1.1) translateY(10px);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(0.7px);
+            transform: scale(1, 1) translateY(0.7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    -webkit-transform: scale(1.1, 0.9) translateY(0);
+            transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    -webkit-transform: scale(0.9, 1.1) translateY(10px);
+            transform: scale(0.9, 1.1) translateY(10px);
+  }
+  50% {
+    -webkit-transform: scale(1.05, 0.95) translateY(0);
+            transform: scale(1.05, 0.95) translateY(0);
+  }
+  57% {
+    -webkit-transform: scale(1, 1) translateY(0.7px);
+            transform: scale(1, 1) translateY(0.7px);
+  }
+  64% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    -webkit-transform: scale(1, 1) translateY(0);
+            transform: scale(1, 1) translateY(0);
+  }
 }
 /*# sourceMappingURL=style.css.map */
