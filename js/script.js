@@ -65,18 +65,27 @@ class ThemeManager{
         );
     }
 }
+
+class EventManager{
+    constructor(){
+        this.navbar = document.getElementById("nav-bar");
+        this.downArrow = document.getElementById("down-arrow");
+        window.addEventListener("scroll", this.onScrollCheckpoints.bind(this));
+        this.downArrow.addEventListener("click", this.downArrowDisappear.bind(this));
+    }
+
+    onScrollCheckpoints(){
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        this.navbar.classList.toggle("no-background", scrollTop <= windowHeight);
+        this.downArrow.classList.toggle("hidden", scrollTop >= windowHeight/3);
+    }
+    
+    downArrowDisappear(){
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+        window.scrollBy(0, windowHeight*2/3);
+    }
+}
+
 const themeManager = new ThemeManager();
-
-var scrollTop = 0;
-window.addEventListener("scroll", function(){
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    document.getElementById("nav-bar").classList.toggle("no-background", scrollTop <= windowHeight);
-    document.getElementById("down-arrow").classList.toggle("hidden", scrollTop >= windowHeight/3);
-});
-
-document.getElementById("down-arrow").addEventListener("click", function(){
-    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-    window.scrollBy(0, windowHeight*2/3);
-});
-
+const eventManager = new EventManager();
