@@ -207,6 +207,14 @@ nav #logo:active .logo-secondary {
   text-align: left;
 }
 
+.table-container th:first-of-type, .table-container td:first-of-type {
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0px;
+  z-index: 2;
+  background-color: var(--bg);
+}
+
 #table-skills th {
   text-align: right;
 }
