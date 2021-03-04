@@ -126,6 +126,10 @@ nav * {
 }
 
 nav #color-mode-toggle-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: pointer;
   font-size: 1.2rem;
   color: var(--fg);
@@ -142,6 +146,13 @@ nav #color-mode-toggle-button {
 
 nav #color-mode-toggle-button:active {
   text-shadow: 0 0 1em var(--highlight-bg);
+}
+
+nav #logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 nav #logo svg {
@@ -224,6 +235,11 @@ nav #logo:active .logo-secondary {
   font-family: 'Libre Barcode 39 Extended Text', cursive;
   text-align: center;
   line-height: 1.2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: crosshair;
 }
 
 #welcome p .phase1 {

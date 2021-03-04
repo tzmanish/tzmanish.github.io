@@ -10,6 +10,8 @@
         font-family: 'Libre Barcode 39 Extended Text', cursive;
         text-align: center;
         line-height: 1.2;
+        user-select: none;
+        cursor: crosshair;
         
         .phase1{
             transition: .2s;
