@@ -2,15 +2,18 @@
     font-family: 'Montserrat';
     src: url('../vendor/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype');
     font-weight: thin;
+    font-display: swap;
 }
 @font-face {
     font-family: 'Libre Barcode 39 Extended Text';
     src: url('../vendor/fonts/Libre_Barcode_39_Extended_Text/LibreBarcode39ExtendedText-Regular.ttf') format('truetype');
+    font-display: swap;
 }
 @font-face {
     font-family: 'Raleway';
     src: url('../vendor/fonts/Raleway/static/Raleway-Medium.ttf') format('truetype');
     font-weight: medium;
+    font-display: swap;
 }
 
 

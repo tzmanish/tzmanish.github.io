@@ -6,22 +6,36 @@
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="Manish Kushwaha">
     <meta name="description" content="Manish Kushwaha is a video game enthusiast who loves to code.">
+    <meta name="theme-color" content="#000"/>
+    <meta name="msapplication-TileColor" content="#b91d47">
+    <meta name="msapplication-config" content="media/icons/browserconfig.xml">
 
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="media/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="media/icons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="media/icons/favicon-16x16.png">
-    <link rel="manifest" href="media/icons/site.webmanifest">
+    <link rel="manifest" href="site.webmanifest">
     <link rel="mask-icon" href="media/icons/safari-pinned-tab.svg" color="#5bbad5">
     <link rel="shortcut icon" href="media/icons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#b91d47">
-    <meta name="msapplication-config" content="media/icons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-grid.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    
     <title>Manish Kushwaha</title>
+    
+    <script src="js/script.js" defer></script>
+    
+    <style> 
+        #tagline .phase2{ font-size: 0; }
+        body { margin: 0 auto; }
+        #main-content { max-width: 800px; padding: 30vh 2rem; margin: 0 auto; }
+        nav { position: fixed; top: 0; padding: 1rem; display: flex; flex-direction: row; }
+        #welcome{ height: 100vh; display: flex; justify-content: center; align-items: center; }
+        nav #logo svg { width: 2rem; height: auto; }
+        .table-container th, .table-container td { word-break: keep-all; padding: 10px; }
+    </style>
+    <link rel="stylesheet" href="vendor/bootstrap/bootstrap-grid.min.css">
+    <link rel="preload" href="vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="vendor/fontawesome/css/all.min.css"></noscript>
+    <link rel="preload" href="css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
 </head>
 
 <body>
@@ -49,7 +63,12 @@
         </div>
     </nav>
     <div id="welcome">
-        <p>I <span class="phase1">love</span><span class="phase2">do</span> what I <span class="phase1">do</span></span><span class="phase2">love</span>.</p>
+        <p id="tagline">
+            I 
+            <span class="phase1">love</span><span class="phase2">do</span> 
+            what I 
+            <span class="phase1">do</span><span class="phase2">love</span>.
+        </p>
         <i class="fas fa-angle-down fa-fw" id="down-arrow"></i>
     </div>
 
@@ -213,7 +232,6 @@
                 Students of Architecture) Conference.</li>
         </ul>
     </div>
-    <script src="js/script.js"></script>
 </body>
 
 </html>

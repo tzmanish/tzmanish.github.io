@@ -1,0 +1,43 @@
+{
+    "name": "manish",
+    "short_name": "manish",
+    "description": "Resume created with plain html, css, javascript and a lot of effort",
+    "icons": [
+        {
+            "src": "media/icons/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "media/icons/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "media/icons/maskable_icon_x192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "media/icons/maskable_icon_x512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "any maskable"
+        }
+    ],
+    "start_url": "/?source=pwa",
+    "display": "standalone",
+    "scope": "/",
+    "theme_color": "#000",
+    "background_color": "#000",
+    "shortcuts": [
+        {
+          "name": "Projects",
+          "short_name": "Projects",
+          "description": "Have a look at my projects",
+          "url": "/projects?source=pwa",
+          "icons": [{ "src": "media/icons/projects.png", "sizes": "192x192" }]
+        }
+      ]
+}

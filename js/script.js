@@ -1,5 +1,15 @@
 "use strict"
 
+window.addEventListener("load", () => {
+    if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("service-worker.js").then(() => {
+            console.log("Service worker install success.");
+          }).catch(() => {
+            console.error("Service worker install failed.");
+          });
+    }
+});
+
 class ThemeManager{
     constructor(){
         // return if mode toggle not supported

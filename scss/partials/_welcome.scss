@@ -5,9 +5,9 @@
     justify-content: center;
     align-items: center;
     
-    p{
+    #tagline{
         font-size: 5em;
-        font-family: 'Libre Barcode 39 Extended Text', cursive;
+        font-family: 'Libre Barcode 39 Extended Text';
         text-align: center;
         line-height: 1.2;
         user-select: none;
@@ -20,12 +20,12 @@
         .phase2{
             transition: .2s;
             color: var(--highlight-bg);
-            font-size: 0%;
+            font-size: 0;
             opacity: 0;
         }
         @include hover {
             .phase1{
-                font-size: 0%;
+                font-size: 0;
                 opacity: 0;
             }
             .phase2{

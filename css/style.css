@@ -2,17 +2,20 @@
   font-family: 'Montserrat';
   src: url("../vendor/fonts/Montserrat/Montserrat-Thin.ttf") format("truetype");
   font-weight: thin;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Libre Barcode 39 Extended Text';
   src: url("../vendor/fonts/Libre_Barcode_39_Extended_Text/LibreBarcode39ExtendedText-Regular.ttf") format("truetype");
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Raleway';
   src: url("../vendor/fonts/Raleway/static/Raleway-Medium.ttf") format("truetype");
   font-weight: medium;
+  font-display: swap;
 }
 
 :root[color-mode="light"] {
@@ -39,7 +42,7 @@ html {
 
 body {
   margin: 0 auto;
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-size: 1rem;
   line-height: 1.5rem;
   font-weight: medium;
@@ -62,20 +65,20 @@ body {
 }
 
 h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 4rem;
+  font-family: "Montserrat";
+  font-size: clamp(1.8rem, 14vw, 4rem);
   line-height: 6rem;
   font-weight: thin;
 }
 
 h2 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-size: 1.5rem;
   line-height: 2.25rem;
 }
 
 h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: "Raleway";
   font-size: 1.2rem;
   line-height: 1.8rem;
 }
@@ -261,9 +264,9 @@ nav.no-background * {
           align-items: center;
 }
 
-#welcome p {
+#welcome #tagline {
   font-size: 5em;
-  font-family: 'Libre Barcode 39 Extended Text', cursive;
+  font-family: 'Libre Barcode 39 Extended Text';
   text-align: center;
   line-height: 1.2;
   -webkit-user-select: none;
@@ -273,37 +276,37 @@ nav.no-background * {
   cursor: crosshair;
 }
 
-#welcome p .phase1 {
+#welcome #tagline .phase1 {
   -webkit-transition: .2s;
   transition: .2s;
   color: var(--highlight-bg);
 }
 
-#welcome p .phase2 {
+#welcome #tagline .phase2 {
   -webkit-transition: .2s;
   transition: .2s;
   color: var(--highlight-bg);
-  font-size: 0%;
+  font-size: 0;
   opacity: 0;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  #welcome p:hover .phase1 {
-    font-size: 0%;
+  #welcome #tagline:hover .phase1 {
+    font-size: 0;
     opacity: 0;
   }
-  #welcome p:hover .phase2 {
+  #welcome #tagline:hover .phase2 {
     font-size: 100%;
     opacity: 1;
   }
 }
 
-#welcome p:active .phase1 {
-  font-size: 0%;
+#welcome #tagline:active .phase1 {
+  font-size: 0;
   opacity: 0;
 }
 
-#welcome p:active .phase2 {
+#welcome #tagline:active .phase2 {
   font-size: 100%;
   opacity: 1;
 }
