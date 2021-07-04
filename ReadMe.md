@@ -1,1 +1,1 @@
-## Static Résumé with HTML, CSS and JS.
+## Static Résumé with HTML, CSS (SCSS) and JS.

@@ -53,12 +53,12 @@ class ThemeManager{
 
     toggleColorMode(){
         const mode = document.documentElement.getAttribute("color-mode");
-    
+
         if(mode == "light"){
             document.documentElement.setAttribute("color-mode", "dark");
             localStorage.setItem("color-mode", "dark");
             this.setColorModeIcon("dark");
-        } 
+        }
         else {
             document.documentElement.setAttribute("color-mode", "light");
             localStorage.setItem("color-mode", "light");
@@ -70,7 +70,7 @@ class ThemeManager{
 
     setMetaThemeColor(){
         document.querySelector('meta[name="theme-color"]').setAttribute(
-            'content',  
+            'content',
             getComputedStyle(document.documentElement).getPropertyValue('--bg-welcome')
         );
     }
@@ -90,7 +90,7 @@ class EventManager{
         this.navbar.classList.toggle("no-background", scrollTop <= windowHeight);
         this.downArrow.classList.toggle("hidden", scrollTop >= windowHeight/3);
     }
-    
+
     downArrowDisappear(){
         const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
         window.scrollBy(0, windowHeight*2/3);
