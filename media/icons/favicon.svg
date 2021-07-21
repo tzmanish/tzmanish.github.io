@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.2.3, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="-10 -10 340 340" style="enable-background:new 0 0 320 320;" xml:space="preserve">
+<style type="text/css">
+	.st0{
+		fill: black;
+		stroke: white;
+		stroke-width: 4px;
+	}
+	@media (prefers-color-scheme: dark) {
+		.st0{
+			fill:white;
+			stroke: black;
+		}
+	}
+</style>
+<g id="Layer_2_1_">
+	<g id="Layer_1-2">
+		<path class="st0" d="M100,100H10c-5.5,0-10-4.5-10-10V0l0,0C55.2,0,100,44.8,100,100z"/>
+		<path class="st0" d="M10,110h80c5.5,0,10,4.5,10,10v80c0,5.5-4.5,10-10,10H10c-5.5,0-10-4.5-10-10v-80C0,114.5,4.5,110,10,110z"/>
+		<path class="st0" d="M210,90c0,5.5-4.5,10-10,10h-90C110,44.8,154.8,0,210,0l0,0V90z"/>
+		<path class="st0" d="M120,110h80c5.5,0,10,4.5,10,10v80c0,5.5-4.5,10-10,10h-80c-5.5,0-10-4.5-10-10v-80
+			C110,114.5,114.5,110,120,110z"/>
+		<path class="st0" d="M220,210L220,210v-90c0-5.5,4.5-10,10-10h90C320,165.2,275.2,210,220,210z"/>
+		<path class="st0" d="M120,220h80c5.5,0,10,4.5,10,10v80c0,5.5-4.5,10-10,10h-80c-5.5,0-10-4.5-10-10v-80
+			C110,224.5,114.5,220,120,220z"/>
+		<path class="st0" d="M320,320h-90c-5.5,0-10-4.5-10-10v-90l0,0C275.2,220,320,264.8,320,320z"/>
+	</g>
+</g>
+</svg>
