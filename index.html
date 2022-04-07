@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="author" content="Manish Kushwaha">
     <meta name="description" content="Manish Kushwaha is a video game enthusiast who loves to code.">
-    <meta name="theme-color" content="#000"/>
+    <meta name="theme-color" content="#000" />
     <meta name="msapplication-TileColor" content="#b91d47">
     <meta name="msapplication-config" content="media/icons/browserconfig.xml">
 
@@ -24,19 +24,56 @@
     <script src="js/dist/script.prod.js" defer></script>
 
     <style>
-        #tagline .phase2{ font-size: 0; }
-        body { margin: 0 auto; }
-        #main-content { max-width: 800px; padding: 30vh 2rem; margin: 0 auto; }
-        nav { position: fixed; top: 0; padding: 1rem; display: flex; flex-direction: row; }
-        #welcome{ height: 100vh; display: flex; justify-content: center; align-items: center; }
-        nav #logo svg { width: 2rem; height: auto; }
-        .table-container th, .table-container td { word-break: keep-all; padding: 10px; }
+        #tagline .phase2 {
+            font-size: 0;
+        }
+
+        body {
+            margin: 0 auto;
+        }
+
+        #main-content {
+            max-width: 800px;
+            padding: 30vh 2rem;
+            margin: 0 auto;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            padding: 1rem;
+            display: flex;
+            flex-direction: row;
+        }
+
+        #welcome {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav #logo svg {
+            width: 2rem;
+            height: auto;
+        }
+
+        .table-container th,
+        .table-container td {
+            word-break: keep-all;
+            padding: 10px;
+        }
     </style>
     <link rel="stylesheet" href="vendor/bootstrap/bootstrap-grid.min.css">
-    <link rel="preload" href="vendor/fontawesome/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="vendor/fontawesome/css/all.min.css"></noscript>
+    <link rel="preload" href="vendor/fontawesome/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
+    </noscript>
     <link rel="preload" href="scss/dist/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/style.css"></noscript>
+    <noscript>
+        <link rel="stylesheet" href="css/style.css">
+    </noscript>
 </head>
 
 <body>
@@ -83,7 +120,8 @@
                 </tr>
                 <tr>
                     <th><i class="fas fa-at fa-fw"></i></td>
-                    <td><a href="mailto:tzmanish97@gmail.com" target="_blank" rel="noopener noreferrer">tzmanish97@gmail.com</a></td>
+                    <td><a href="mailto:tzmanish97@gmail.com" target="_blank"
+                            rel="noopener noreferrer">tzmanish97@gmail.com</a></td>
                 </tr>
                 <tr>
                     <th><i class="fab fa-github fa-fw"></i></td>
@@ -96,40 +134,47 @@
             </tbody>
         </table>
 
+        <h2 class="section-heading">About</h2>
+        <p>I love video games since childhood, I wanted to build my own game someday and that's what initially attracted me towards Coding, and then I fell in love with it too!</p>
+        <p>Writing code is the most precise way for me to express my thought process and creativity, I like building something from scratch, something that challenges my mind & knowledge.</p>
+        <p>Apart from playing video games, I enjoy visiting new places, meeting new people, learning new things and trying new dishes.</p>
+
         <h2 class="section-heading">Area of Interest</h2>
-        <p>Software Development, Problem Solving, Data Structures &amp; Algorithm </p>
+        <p>Problem Solving, Video Games, Data Structures &amp; Algorithm</p>
 
         <h2 class="section-heading">Education</h2>
         <div class="table-container">
             <table id="table-education">
                 <thead>
                     <tr>
+                        <th>Institution</th>
                         <th>Degree</th>
                         <th>Year</th>
-                        <th>Institution</th>
                         <th>Board</th>
                         <th>Score</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>B.Arch (Bachelor of Architecture)</td>
-                        <td>2020</td>
                         <td>Indian Institute of Technology Roorkee</td>
+                        <td>B.Arch</td>
+                        <td>2020</td>
                         <td>-</td>
-                        <td><!-- 7.269 -->7.3/10</td>
+                        <td>
+                            <!-- 7.269 -->7.3/10
+                        </td>
                     </tr>
                     <tr>
-                        <td>Intermediate (Class 12)</td>
-                        <td>2014</td>
                         <td>Jawahar Navodaya Vidyalaya, Surajpur</td>
+                        <td>Class 12</td>
+                        <td>2014</td>
                         <td>CBSE</td>
                         <td>93.4%</td>
                     </tr>
                     <tr>
-                        <td>Matriculation (Class 10)</td>
-                        <td>2012</td>
                         <td>Jawahar Navodaya Vidyalaya, Surajpur</td>
+                        <td>Class 10</td>
+                        <td>2012</td>
                         <td>CBSE</td>
                         <td>9.4/10</td>
                     </tr>
@@ -139,12 +184,16 @@
 
         <h2 class="section-heading">Experiance</h2>
         <p>
-            <strong>Software Engineer</strong> | Societe Generale Global Solution Centre, Bangalore<br />
+            <strong>Software Engineer</strong> | Regulatory Reporting, Societe Generale Global Solution Centre,
+            Bangalore<br />
             <em>Aug 17, 2020 - Present</em>
         </p>
         <ul>
-            <li>Automation of regulatory report generation process for Asia region using JAVA and Shell Scripting</li>
-            <li>GUI for report launch and Document backup/archival/retrieval solution using dotnet, Angular and RESTful APIs</li>
+            <li>Development of Order Lifecycle reporting solution on cloud (Big data: Hadoop, Spark, Azure)</li>
+            <li>Maintainance of report launch and Document backup/archival/retrieval sloution (Web Application: dotnet
+                core, RESTful APIs, Angular, MySql)</li>
+            <li>Automation of regulatory report generation for Asia region (JAVA, Python, Shell Scripting, Job
+                Scheduling)</li>
         </ul>
 
         <h2 class="section-heading">Internship</h2>
@@ -153,22 +202,53 @@
             <em>Apr 28, 2019 - June 28, 2019</em>
         </p>
         <ul>
-            <li>The client needed a cross platform application that , whenever a new stock buy alert is posted on the blogging website of Dr. Rida Morva, sends a notification with the name of stock and recommended price, within two seconds of publication.</li>
-            <li>So far approximately 1200 blogs were published in total ie. there was not enough data to train an ML based NLP model.</li>
+            <li>The client needed a cross platform application that , whenever a new stock buy alert is posted on the
+                blogging website of Dr. Rida Morva, sends a notification with the name of stock and recommended price,
+                within two seconds of publication.</li>
+            <li>So far approximately 1200 blogs were published in total ie. there was not enough data to train an ML
+                based NLP model.</li>
             <li>This was a paid blog, managing cookies and credentials was crucial to access the required content.</li>
-            <li>Scraping the host's website every second and bypassing it's strict security measures were the major challenges before us.</li>
+            <li>Scraping the host's website every second and bypassing it's strict security measures were the major
+                challenges before us.</li>
         </ul>
 
         <h2 class="section-heading">Projects</h2>
         <p>
-            <strong>Product Showcasing Website</strong> | Rohit Dinkar Architects &amp; Dinkar Associates, Indore<br />
+            <strong>Product Showcase Website</strong> | Rohit Dinkar Architects &amp; Dinkar Associates, Indore<br />
             <em>Jan 1, 2019 - Feb 5, 2019</em>
         </p>
         <ul>
-            <li>Delivered a product showcasing website with a feature rich admin dashboard and CRUD functionality in a
-                given
-                time period of one month.</li>
+            <li>Delivered a website to showcase existing projects and admin dashboard with CRUD functionality in a
+                period of one month.</li>
         </ul>
+
+        <h2 class="section-heading">Skills</h2>
+        <div class="table-container">
+            <table id="table-skills">
+                <tbody>
+                    <tr>
+                        <th>Computer Languages</td>
+                        <td>C/C++, Python, Java, Javascript/Typescript, Bash (Shell Scripting), SQL</td>
+                    </tr>
+                    <tr>
+                        <th>Platforms and Software Packages</td>
+                        <td>Microsft Azure (Storage account, Key Vault, VM, App Service), Apache Spark, Apache Hadoop,
+                            Autodesk
+                            AutoCAD, Adobe Illustrator</td>
+                    </tr>
+                    <tr>
+                        <th>Additional Courses Taken</td>
+                        <td>IGNITE Azure Training, Computer Systems and Programming, Computer Application in Architecture, Augmented Reality
+                            Workshop
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>Languages Known</td>
+                        <td>Hindi (SRW), English (SRW)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
 
         <h2 class="section-heading">Achievements</h2>
         <p>
@@ -176,8 +256,10 @@
             <em>2013 - 14</em>
         </p>
         <ul>
-            <li>Winner in State level IT Exhibition Organized by NVS, Bhopal, Recognized by MHRD, Department of School Education and Literacy, Government of India.</li>
-            <li>Ranked Third in Regional level Computer Science exhibition Organized by NVS, Bhopal, Recognized by MHRD, Department of School Education and Literacy, Government of India.</li>
+            <li>Winner in State level IT Exhibition Organized by NVS, Bhopal, Recognized by MHRD, Department of School
+                Education and Literacy, Government of India.</li>
+            <li>Ranked Third in Regional level Computer Science exhibition Organized by NVS, Bhopal, Recognized by MHRD,
+                Department of School Education and Literacy, Government of India.</li>
         </ul>
         <p>
             <strong>59th Annual National Association of Students of Architecture Convention</strong> | Jaipur<br />
@@ -191,33 +273,10 @@
             <em>2017</em>
         </p>
         <ul>
-            <li>The event involved all kinds of algorithmic challenges, ranging from string manipulation to dynamic programming.</li>
+            <li>The event involved all kinds of algorithmic challenges, ranging from string manipulation to dynamic
+                programming.</li>
             <li>Our team of three got second place in the event.</li>
         </ul>
-
-        <h2 class="section-heading">Skills</h2>
-        <div class="table-container">
-            <table id="table-skills">
-                <tbody>
-                    <tr>
-                        <th>Computer Languages</td>
-                        <td>C/C++, Python, Javascript, Shell Scripting, SQL</td>
-                    </tr>
-                    <tr>
-                        <th>Platforms and Software Packages</td>
-                        <td>Microsft Azure, Autodesk AutoCAD, SketchUp, Autodesk Revit, Adobe Illustrator, Adobe Photoshop, Microsoft Office</td>
-                    </tr>
-                    <tr>
-                        <th>Additional Courses Taken</td>
-                        <td>Computer Systems and Programming, Computer Application in Architecture, Economics, Sociology, Surveying, Structural Analysis and Design - RCC and Steel, Vastu Shastra, Augmented Reality Workshop</td>
-                    </tr>
-                    <tr>
-                        <th>Languages Known</td>
-                        <td>Hindi (SRW), English (SRW)</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
 
         <h2 class="section-heading">Positions of Responsibility &amp; Extra Curricular</h2>
         <p>
@@ -227,7 +286,8 @@
         <ul>
             <li>Rectified bugs and added new features and filters to the Institute's People Search Portal.</li>
             <li>Converted traditional SQL queries, previously being used, into Django models and queries.</li>
-            <li>Modified the search algorithm to remove the irrelevant results and to show the results in proper order. </li>
+            <li>Modified the search algorithm to remove the irrelevant results and to show the results in proper order.
+            </li>
         </ul>
         <p>
             <strong>Coordinator</strong> | Bambootech, Cognizance, IIT Roorkee<br />
