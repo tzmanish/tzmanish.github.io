@@ -1,0 +1,27 @@
+<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="400" height="400" shape-rendering="geometricPrecision">
+  <defs>
+    <path id="square" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L0.5 0 z"/>
+    <path id="arc-tl" d="M6.5 0 A6.5 6.5 0 0 0 0 6.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L6.5 0 z"/>
+    <path id="arc-tr" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 6.5 A6.5 6.5 0 0 0 0.5 0 L0.5 0 z"/>
+    <path id="arc-br" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L0.5 7 A6.5 6.5 0 0 0 7 0.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L0.5 0 z"/>
+    <path id="circle" d="M3.5 0 A3.5 3.5 0 0 0 0 3.5 L0 3.5 A3.5 3.5 0 0 0 3.5 7 L3.5 7 A3.5 3.5 0 0 0 7 3.5 L7 3.5 A3.5 3.5 0 0 0 3.5 0 L3.5 0 z"/>
+  </defs>
+
+  <!-- <CHANGE> Made logo theme-aware with CSS custom properties -->
+  <style>
+    path { 
+      fill: var(--logo-color, #f59e0b);
+      transition: fill 0.3s ease;
+    }
+  </style>
+  
+  <use href="#arc-tr" class="fixed" transform="translate(1,1)"/>
+  <use href="#arc-tl" class="fixed" transform="translate(8.5,1)"/>
+  <use href="#square" class="filler" transform="translate(16,1)"/>
+  <use href="#square" class="fixed" transform="translate(1,8.5)"/>
+  <use href="#square" class="fixed" transform="translate(8.5,8.5)"/>
+  <use href="#arc-br" class="fixed" transform="translate(16,8.5)"/>
+  <use href="#square" class="filler" transform="translate(1,16)"/>
+  <use href="#square" class="fixed" transform="translate(8.5,16)"/>
+  <use href="#arc-tr" class="fixed" transform="translate(16,16)"/>
+</svg>
