@@ -3,6 +3,7 @@ import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 import { Manrope } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
+import { ThemeColorMeta } from "@/components/theme-color-meta"
 import "./globals.css"
 
 const geist = Geist({
@@ -24,31 +25,25 @@ export const metadata: Metadata = {
   keywords: [
     "Backend Engineer",
     "Java Developer",
-    "Spring Boot",
-    "Apache Spark",
-    "Financial Systems",
+    "Coder",
     "Societe Generale",
     "IIT Roorkee",
-    "Azure Cloud",
-    "Kubernetes",
-    "Regulatory Compliance",
+    "JNV Basdei"
   ],
   authors: [{ name: "Manish Kumar Kushwaha" }],
   creator: "Manish Kumar Kushwaha",
   openGraph: {
     type: "website",
-    locale: "en_US",
+    locale: "en_IN",
     url: "https://manishkushwaha.dev",
     title: "Manish Kumar Kushwaha - Backend Software Engineer",
-    description:
-      "Backend Software Engineer with 5+ years experience in large-scale financial systems. Java, Spring Boot, and regulatory compliance expert.",
+    description: "Backend Software Engineer with 5+ years experience in large-scale financial systems. Java, Spring Boot, and regulatory compliance expert.",
     siteName: "Manish Kumar Kushwaha Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Manish Kumar Kushwaha - Backend Software Engineer",
-    description:
-      "Backend Software Engineer with 5+ years experience in large-scale financial systems. Java, Spring Boot, and regulatory compliance expert.",
+    description: "Backend Software Engineer with 5+ years experience in large-scale financial systems. Java, Spring Boot, and regulatory compliance expert.",
   },
   robots: {
     index: true,
@@ -60,8 +55,7 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  generator: "v0.app",
+  }
 }
 
 export default function RootLayout({
@@ -73,11 +67,12 @@ export default function RootLayout({
     <html lang="en" className={`${geist.variable} ${manrope.variable} antialiased`} suppressHydrationWarning>
       <head>
         <link rel="icon" href="/logo.svg" type="image/svg+xml" />
-        <meta name="theme-color" content="#10b981" />
+        <meta name="theme-color" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body className="font-sans">
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
+          <ThemeColorMeta />
           {children}
         </ThemeProvider>
       </body>

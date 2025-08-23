@@ -1,0 +1,66 @@
+"use client"
+
+import { useEffect } from "react"
+import { useTheme } from "./theme-provider"
+
+export function ThemeColorMeta() {
+  const { theme, mounted } = useTheme()
+
+  useEffect(() => {
+    if (!mounted) return
+
+    // Update theme color
+    const themeColorMeta = document.querySelector('meta[name="theme-color"]')
+    if (themeColorMeta) {
+      const bgColor = getComputedStyle(document.documentElement)
+        .getPropertyValue('--background')
+        .trim()
+      
+      themeColorMeta.setAttribute("content", bgColor)
+    }
+
+    // Update favicon with current accent color
+    const logoColor = getComputedStyle(document.documentElement)
+      .getPropertyValue('--accent')
+      .trim()
+
+    const svgContent = `
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="400" height="400" shape-rendering="geometricPrecision">
+        <defs>
+          <rect id="square" x="0" y="0" width="7" height="7" rx="0.5" ry="0.5"/>
+          <path id="arc-tl" d="M6.5 0 A6.5 6.5 0 0 0 0 6.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L6.5 0 z"/>
+          <path id="arc-tr" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 6.5 A6.5 6.5 0 0 0 0.5 0 L0.5 0 z"/>
+          <path id="arc-br" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L0.5 7 A6.5 6.5 0 0 0 7 0.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L0.5 0 z"/>
+        </defs>
+
+        <style>
+          .fixed { 
+            fill: ${logoColor};
+          }
+          .filler {
+            fill: color-mix(in srgb, ${logoColor} 50%, transparent);
+          }
+        </style>
+        
+        <use href="#arc-tr" class="fixed" transform="translate(1,1)"/>
+        <use href="#arc-tl" class="fixed" transform="translate(8.5,1)"/>
+        <use href="#square" class="filler" transform="translate(16,1)"/>
+        <use href="#square" class="fixed" transform="translate(1,8.5)"/>
+        <use href="#square" class="fixed" transform="translate(8.5,8.5)"/>
+        <use href="#arc-br" class="fixed" transform="translate(16,8.5)"/>
+        <use href="#square" class="filler" transform="translate(1,16)"/>
+        <use href="#square" class="fixed" transform="translate(8.5,16)"/>
+        <use href="#arc-tr" class="fixed" transform="translate(16,16)"/>
+      </svg>
+    `
+
+    const favicon = document.querySelector('link[rel="icon"]') as HTMLLinkElement
+    if (favicon) {
+      const blob = new Blob([svgContent], { type: 'image/svg+xml' })
+      const url = URL.createObjectURL(blob)
+      favicon.href = url
+    }
+  }, [theme, mounted])
+
+  return null
+}
