@@ -53,17 +53,17 @@ export default function Portfolio() {
                 />
               </div>
               <div className="flex justify-center gap-4 text-sm text-muted-foreground mb-8">
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors">
-                  <MapPin className="w-4 h-4" />
+                <div className="flex items-center gap-1 hover:text-foreground transition-colors duration-300">
+                  <MapPin className="w-4 h-4 group-hover:text-foreground transition-colors duration-300" />
                   Bengaluru, India
                 </div>
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors">
+                <div className="flex items-center gap-1 hover:text-foreground transition-colors duration-300">
                   <Mail className="w-4 h-4" />
                   <a href="mailto:tzmanish97@gmail.com" className="hover:underline">
                     tzmanish97@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors">
+                <div className="flex items-center gap-1 hover:text-foreground transition-colors duration-300">
                   <Phone className="w-4 h-4" />
                   <a href="tel:+919456522346" className="hover:underline">
                     +91 9456522346
@@ -107,7 +107,7 @@ export default function Portfolio() {
         <section id="about" className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">About Me</h2>
-            <Card className="mb-8 enhanced-card">
+            <Card className="mb-8 enhanced-card card-hover-responsive">
               <CardContent className="p-8">
                 <p className="text-lg leading-relaxed text-muted-foreground">
                   Backend Software Engineer with 5+ years' experience in large-scale, compliance-critical financial
@@ -145,7 +145,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Education</h2>
 
-            <Card className="mb-8 enhanced-card">
+            <Card className="mb-8 enhanced-card card-hover-responsive">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
                   <Award className="w-5 h-5 text-primary" />
@@ -182,7 +182,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Professional Experience</h2>
 
-            <Card className="mb-8 enhanced-card">
+            <Card className="mb-8 enhanced-card card-hover-responsive">
               <CardHeader>
                 <div className="flex justify-between items-start">
                   <div>
@@ -233,7 +233,7 @@ export default function Portfolio() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Technical Expertise</h2>
             <div className="grid md:grid-cols-3 gap-8">
-              <Card className="enhanced-card hover-lift">
+              <Card className="enhanced-card card-hover-responsive">
                 <CardHeader>
                   <CardTitle className="text-lg">Programming</CardTitle>
                 </CardHeader>
@@ -258,7 +258,7 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
 
-              <Card className="enhanced-card hover-lift">
+              <Card className="enhanced-card card-hover-responsive">
                 <CardHeader>
                   <CardTitle className="text-lg">Data Management</CardTitle>
                 </CardHeader>
@@ -283,7 +283,7 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
 
-              <Card className="enhanced-card hover-lift">
+              <Card className="enhanced-card card-hover-responsive">
                 <CardHeader>
                   <CardTitle className="text-lg">Cloud & DevOps</CardTitle>
                 </CardHeader>
@@ -386,7 +386,7 @@ export default function Portfolio() {
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Certifications & Awards</h2>
 
             <div className="grid md:grid-cols-2 gap-8">
-              <Card className="enhanced-card hover-lift">
+              <Card className="enhanced-card card-hover-responsive">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-primary" />
@@ -409,7 +409,7 @@ export default function Portfolio() {
                 </CardContent>
               </Card>
 
-              <Card className="enhanced-card hover-lift">
+              <Card className="enhanced-card card-hover-responsive">
                 <CardHeader>
                   <CardTitle className="flex items-center gap-2">
                     <Award className="w-5 h-5 text-primary" />

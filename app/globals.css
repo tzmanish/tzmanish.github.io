@@ -3,48 +3,48 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fcfcf8;
-  --foreground: #060b14;
-  --accent: #00858d;
-  --accent-foreground: #fcfcf8;
+  --background: oklch(98.997% 0.00516 106.832);
+  --foreground: oklch(14.883% 0.02163 259.643);
+  --accent: oklch(56.15% 0.09558 202.281);
+  --accent-foreground: oklch(98.997% 0.00516 106.832);
   --radius: 0.5rem;
-  --card: #f6f6ee;
-  --card-foreground: #060b14;
-  --popover: #fcfcf8;
-  --popover-foreground: #060b14;
-  --primary: teal;
-  --primary-foreground: #fcfcf8;
-  --secondary: #dde5f2;
+  --card: oklch(97.095% 0.01046 106.761);
+  --card-foreground: oklch(14.883% 0.02163 259.643);
+  --popover: oklch(98.997% 0.00516 106.832);
+  --popover-foreground: oklch(14.883% 0.02163 259.643);
+  --primary: oklch(54.313% 0.09273 194.807);
+  --primary-foreground: oklch(98.997% 0.00516 106.832);
+  --secondary: oklch(91.969% 0.01978 260.234);
   --secondary-foreground: #060b14;
-  --muted: #eaeff5;
-  --muted-foreground: #4f5661;
-  --destructive: #ee343a;
-  --destructive-foreground: #fcfcf8;
-  --border: #d7dbe1;
-  --input: #f6f6ee;
-  --ring: #0070464d;
+  --muted: oklch(95.006% 0.0098 253.018);
+  --muted-foreground: oklch(45.101% 0.02014 259.45);
+  --destructive: oklch(62.055% 0.22041 25.129);
+  --destructive-foreground: oklch(98.997% 0.00516 106.832);
+  --border: oklch(89.01% 0.00939 258.482);
+  --input: oklch(97.095% 0.01046 106.761);
+  --ring: oklch(48.057% 0.11068 158.931 / 0.302);
 }
 
 .dark {
-  --background: #020204;
-  --foreground: #efefe7;
-  --accent: tomato;
-  --accent-foreground: #fcfcf8;
-  --card: #040609;
-  --card-foreground: #efefe7;
-  --popover: #040609;
-  --popover-foreground: #efefe7;
-  --primary: coral;
-  --primary-foreground: #020204;
-  --secondary: #0f1216;
-  --secondary-foreground: #efefe7;
-  --muted: #0b0d12;
-  --muted-foreground: #8b8f95;
-  --destructive: #ff4c4d;
-  --destructive-foreground: #efefe7;
-  --border: #13161b;
-  --input: #0b0d12;
-  --ring: #0092654d;
+  --background: oklch(8.724% 0.0101 284.109);
+  --foreground: oklch(94.993% 0.01051 106.762);
+  --accent: oklch(69.62% 0.19551 32.304);
+  --accent-foreground: oklch(98.997% 0.00516 106.832);
+  --card: oklch(12.053% 0.00973 252.921);
+  --card-foreground: oklch(94.993% 0.01051 106.762);
+  --popover: oklch(12.053% 0.00973 252.921);
+  --popover-foreground: oklch(94.993% 0.01051 106.762);
+  --primary: oklch(73.51% 0.16796 40.228);
+  --primary-foreground: oklch(8.724% 0.0101 284.109);
+  --secondary: oklch(18.079% 0.00955 255.683);
+  --secondary-foreground: oklch(94.993% 0.01051 106.762);
+  --muted: oklch(15.928% 0.01116 267.992);
+  --muted-foreground: oklch(64.863% 0.01014 258.447);
+  --destructive: oklch(67.198% 0.21544 24.817);
+  --destructive-foreground: oklch(94.993% 0.01051 106.762);
+  --border: oklch(19.927% 0.01111 260.69);
+  --input: oklch(15.928% 0.01116 267.992);
+  --ring: oklch(58.369% 0.12649 162.838 / 0.302);
 }
 
 @theme inline {
@@ -71,19 +71,8 @@
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;    
-    --transition-duration: 300ms;
-    --transition-ease-in: cubic-bezier(0.4, 0, 0.2, 1);   /* smooth in */
-    --transition-ease-out: cubic-bezier(0.55, 0.06, 0.68, 0.19); /* crisp out */
-    --transition-ease: var(--transition-ease-in); /* default */
-
-    transition-property: background-color, border-color, color, fill, stroke, rx, ry;
-    transition-timing-function: var(--transition-ease);
-    transition-duration: var(--transition-duration);
-  }
   body {
-    @apply bg-background text-foreground transition-colors duration-300;
+    @apply bg-background text-foreground;
   }
 
   /* Adding smooth scroll behavior and custom animations */
@@ -96,11 +85,11 @@
   }
 
   /* Custom hover animations */
-  .hover-lift {
+  .card-hover-responsive {
     @apply transition-all duration-300 hover:shadow-lg hover:scale-101 hover:shadow-primary/10;
   }
 
-  .hover-glow {
+  .button-hover-responsive{
     @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary/20;
   }
 
@@ -114,6 +103,11 @@
     @apply bg-card/80 backdrop-blur-sm border border-border/60 shadow-sm hover:shadow-md hover:border-primary/20 hover:bg-card/90 transition-all duration-300;
   }
   
+  svg.group .cell {
+    transition: fill 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      rx 300ms cubic-bezier(0.4, 0, 0.2, 1),
+      ry 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
   svg.group .fixed { 
     fill: var(--accent);
   }
@@ -123,6 +117,7 @@
   svg.group:hover .filler {
     rx: 3.5px;
     ry: 3.5px;
-    --transition-ease: var(--transition-ease-out);
+    transition: rx 300ms cubic-bezier(0.55, 0.06, 0.68, 0.19), 
+      ry 300ms cubic-bezier(0.55, 0.06, 0.68, 0.19);
   }
 }

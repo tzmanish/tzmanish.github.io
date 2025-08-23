@@ -64,7 +64,7 @@ export function BlogSection() {
 
       <div className="grid gap-6">
         {blogPosts.map((post, index) => (
-          <Card key={post.slug} className="enhanced-card hover-lift group">
+          <Card key={post.slug} className="enhanced-card card-hover-responsive group">
             <CardHeader>
               <div className="flex justify-between items-start gap-4">
                 <div className="flex-1">
@@ -109,7 +109,7 @@ export function BlogSection() {
       </div>
 
       <div className="text-center">
-        <Button variant="outline" size="lg" className="hover-glow bg-transparent">
+        <Button variant="outline" size="lg" className="button-hover-responsivebg-transparent">
           <BookOpen className="w-4 h-4 mr-2" />
           View All Articles
         </Button>

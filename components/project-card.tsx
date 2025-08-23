@@ -30,7 +30,7 @@ export function ProjectCard({
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
-    <Card className={`hover-lift enhanced-card ${isHighlighted ? "ring-2 ring-primary/20" : ""}`}>
+    <Card className={`card-hover-responsive enhanced-card ${isHighlighted ? "ring-2 ring-primary/20" : ""}`}>
       <CardHeader>
         <div className="flex justify-between items-start">
           <div>
@@ -85,7 +85,7 @@ export function ProjectCard({
 
         <div className="flex gap-2">
           {liveUrl && (
-            <Button variant="outline" size="sm" asChild className="hover-glow bg-transparent">
+            <Button variant="outline" size="sm" asChild className="button-hover-responsivebg-transparent">
               <a href={liveUrl} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="w-4 h-4 mr-2" />
                 Live Demo
@@ -93,7 +93,7 @@ export function ProjectCard({
             </Button>
           )}
           {githubUrl && (
-            <Button variant="outline" size="sm" asChild className="hover-glow bg-transparent">
+            <Button variant="outline" size="sm" asChild className="button-hover-responsivebg-transparent">
               <a href={githubUrl} target="_blank" rel="noopener noreferrer">
                 <Github className="w-4 h-4 mr-2" />
                 Source Code

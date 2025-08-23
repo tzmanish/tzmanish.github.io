@@ -27,15 +27,15 @@ export const Logo: React.FC<LogoProps> = ({color}) => {
                 fill: color-mix(in srgb, ${color ? color : 'var(--accent, #FF9933)'} 50%, transparent);
             }`}
         </style>
-        <use href="#arc-tr" className="fixed" transform="translate(1,1)" />
-        <use href="#arc-tl" className="fixed" transform="translate(8.5,1)" />
-        <rect className="filler" x="16" y="1" width="7" height="7" rx="0.5" ry="0.5" />
-        <use href="#square" className="fixed" transform="translate(1,8.5)" />
-        <use href="#square" className="fixed" transform="translate(8.5,8.5)" />
-        <use href="#arc-br" className="fixed" transform="translate(16,8.5)" />
-        <rect className="filler" x="1" y="16" width="7" height="7" rx="0.5" ry="0.5" />
-        <use href="#square" className="fixed" transform="translate(8.5,16)" />
-        <use href="#arc-tr" className="fixed" transform="translate(16,16)" />
+        <use href="#arc-tr" className="cell fixed" transform="translate(1,1)" />
+        <use href="#arc-tl" className="cell fixed" transform="translate(8.5,1)" />
+        <rect className="cell filler" x="16" y="1" width="7" height="7" rx="0.5" ry="0.5" />
+        <use href="#square" className="cell fixed" transform="translate(1,8.5)" />
+        <use href="#square" className="cell fixed" transform="translate(8.5,8.5)" />
+        <use href="#arc-br" className="cell fixed" transform="translate(16,8.5)" />
+        <rect className="cell filler" x="1" y="16" width="7" height="7" rx="0.5" ry="0.5" />
+        <use href="#square" className="cell fixed" transform="translate(8.5,16)" />
+        <use href="#arc-tr" className="cell fixed" transform="translate(16,16)" />
     </svg>
 };
 
