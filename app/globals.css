@@ -4,18 +4,15 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  /* Improved color scheme with better contrast and harmony */
   --background: #fcfcf8;
   --foreground: #060b14;
   --accent: #00858d;
   --radius: 0.5rem;
-
-
   --card: #f6f6ee;
   --card-foreground: #060b14;
   --popover: #fcfcf8;
   --popover-foreground: #060b14;
-  --primary: var(--accent);
+  --primary: teal;
   --primary-foreground: #fcfcf8;
   --secondary: #dde5f2;
   --secondary-foreground: #060b14;
@@ -30,17 +27,14 @@
 }
 
 .dark {
-  /* Enhanced dark mode with better readability and contrast */
   --background: #020204;
   --foreground: #efefe7;
-  --accent: #00a4ac;
-  
-  
+  --accent: tomato;
   --card: #040609;
   --card-foreground: #efefe7;
   --popover: #040609;
   --popover-foreground: #efefe7;
-  --primary: var(--accent);
+  --primary: coral;
   --primary-foreground: #020204;
   --secondary: #0f1216;
   --secondary-foreground: #efefe7;
@@ -55,9 +49,9 @@
 }
 
 @theme inline {
-  --logo-color: var(--accent);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --logo-color: var(--accent);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -81,7 +75,7 @@
 @layer base {
   * {
     @apply border-border outline-ring/50;    
-    --transition-duration: 200ms;
+    --transition-duration: 300ms;
     --transition-ease-in: cubic-bezier(0.4, 0, 0.2, 1);   /* smooth in */
     --transition-ease-out: cubic-bezier(0.55, 0.06, 0.68, 0.19); /* crisp out */
     --transition-ease: var(--transition-ease-in); /* default */
@@ -123,10 +117,10 @@
   }
   
   svg.group .fixed { 
-    fill: var(--logo-color, #f59e0b);
+    fill: var(--logo-color);
   }
   svg.group .filler {
-    fill: color-mix(in srgb, var(--logo-color, #f59e0b) 50%, transparent);
+    fill: color-mix(in srgb, var(--logo-color) 50%, transparent);
   }
   svg.group:hover .filler {
     rx: 3.5px;
