@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@import "tw-animate-css";
 
 @custom-variant dark (&:is(.dark *));
 
@@ -51,7 +50,6 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --logo-color: var(--accent);
   --color-card: var(--card);
   --color-card-foreground: var(--card-foreground);
   --color-popover: var(--popover);
@@ -117,10 +115,10 @@
   }
   
   svg.group .fixed { 
-    fill: var(--logo-color);
+    fill: var(--accent);
   }
   svg.group .filler {
-    fill: color-mix(in srgb, var(--logo-color) 50%, transparent);
+    fill: color-mix(in srgb, var(--accent) 50%, transparent);
   }
   svg.group:hover .filler {
     rx: 3.5px;

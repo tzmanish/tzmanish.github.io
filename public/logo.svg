@@ -8,10 +8,10 @@
 
   <style>
     .fixed { 
-      fill: var(--logo-color, #e60023);
+      fill: #e60023;
     }
     .filler {
-      fill: color-mix(in srgb, var(--logo-color, #e60023) 50%, transparent);
+      fill: color-mix(in srgb, #e60023 50%, transparent);
     }
   </style>
   
