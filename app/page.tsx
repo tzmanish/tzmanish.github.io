@@ -11,6 +11,7 @@ import { ScrollProgress } from "@/components/scroll-progress"
 import { FloatingNav } from "@/components/floating-nav"
 import { TypingAnimation } from "@/components/typing-animation"
 import { BackToTop } from "@/components/back-to-top"
+import { Logo } from "@/components/ui/logo"
 
 export default function Portfolio() {
   return (
@@ -27,25 +28,7 @@ export default function Portfolio() {
             <div className="mb-8">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 hover:scale-110 transition-transform duration-300">
-                  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="80" height="80" className="w-full h-full group" >
-                    <defs>
-                      <rect id="square" x="0" y="0" width="7" height="7" rx="0.5" ry="0.5"/>
-                      <path id="arc-tl" d="M6.5 0 A6.5 6.5 0 0 0 0 6.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L6.5 0 z"/>
-                      <path id="arc-tr" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L6.5 7 A0.5 0.5 0 0 0 7 6.5 L7 6.5 A6.5 6.5 0 0 0 0.5 0 L0.5 0 z"/>
-                      <path id="arc-br" d="M0.5 0 A0.5 0.5 0 0 0 0 0.5 L0 6.5 A0.5 0.5 0 0 0 0.5 7 L0.5 7 A6.5 6.5 0 0 0 7 0.5 L7 0.5 A0.5 0.5 0 0 0 6.5 0 L0.5 0 z"/>
-                    </defs>
-
-                    <use href="#arc-tr" className="fixed" transform="translate(1,1)"/>
-                    <use href="#arc-tl" className="fixed" transform="translate(8.5,1)"/>
-                    <use href="#circle" className="filler" transform="translate(16,1)"/>
-                    <rect className="filler" x="16" y="1" width="7" height="7" rx="0.5" ry="0.5"/>
-                    <use href="#square" className="fixed" transform="translate(1,8.5)"/>
-                    <use href="#square" className="fixed" transform="translate(8.5,8.5)"/>
-                    <use href="#arc-br" className="fixed" transform="translate(16,8.5)"/>
-                    <rect className="filler" x="1" y="16" width="7" height="7" rx="0.5" ry="0.5"/>
-                    <use href="#square" className="fixed" transform="translate(8.5,16)"/>
-                    <use href="#arc-tr" className="fixed" transform="translate(16,16)"/>
-                  </svg>
+                  <Logo/>
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-serif gradient-text">
@@ -56,8 +39,15 @@ export default function Portfolio() {
                   texts={[
                     "Backend Software Engineer",
                     "Java & Spring Boot Expert",
-                    "Cloud Architecture Specialist",
-                    "Financial Systems Developer",
+                    "Distributed Systems Designer",
+                    "Cloud-Native Solutions Builder",
+                    "Video Game Enthusiast",
+                    "API Craftsman",
+                    "Code Whisperer",
+                    "Microservices Architect",
+                    "Bug Detective",
+                    "Scalable Systems Engineer",
+                    "Optimization Obsessed",
                   ]}
                   className="font-medium"
                 />
@@ -81,19 +71,19 @@ export default function Portfolio() {
                 </div>
               </div>
               <div className="flex justify-center gap-4">
-                <Button variant="default" size="lg" asChild className="hover-glow">
+                <Button variant="outline" size="lg" asChild className="hover-glow">
                   <a href="https://linkedin.com/in/tzman" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="hover-glow bg-transparent">
+                <Button variant="outline" size="lg" asChild className="hover-glow">
                   <a href="https://github.com/tzmanish" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" className="hover-glow bg-transparent" asChild>
+                <Button variant="default" size="lg" asChild className="hover-glow">
                   <a href="/resume-manish-kushwaha.pdf" download>
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
@@ -113,7 +103,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* About Section */}
-      <AnimatedSection delay={100}>
+      <AnimatedSection>
         <section id="about" className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">About Me</h2>
@@ -150,7 +140,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Education Section */}
-      <AnimatedSection delay={200}>
+      <AnimatedSection>
         <section id="education" className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Education</h2>
@@ -187,7 +177,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Experience Section */}
-      <AnimatedSection delay={300}>
+      <AnimatedSection>
         <section id="experience" className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Professional Experience</h2>
@@ -238,7 +228,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Skills Section */}
-      <AnimatedSection delay={400}>
+      <AnimatedSection>
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Technical Expertise</h2>
@@ -323,7 +313,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Projects Section */}
-      <AnimatedSection delay={500}>
+      <AnimatedSection>
         <section id="projects" className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Featured Projects</h2>
@@ -380,7 +370,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Blog Section */}
-      <AnimatedSection delay={600}>
+      <AnimatedSection>
         <section id="blog" className="py-16 px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Latest Articles</h2>
@@ -390,7 +380,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Certifications Section */}
-      <AnimatedSection delay={700}>
+      <AnimatedSection>
         <section className="py-16 px-4 bg-muted/30">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Certifications & Awards</h2>
@@ -449,7 +439,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Contact Section */}
-      <AnimatedSection delay={800}>
+      <AnimatedSection>
         <section id="contact" className="py-16 px-4 bg-primary/5">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-center mb-12 font-serif">Get In Touch</h2>

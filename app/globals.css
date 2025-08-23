@@ -6,6 +6,7 @@
   --background: #fcfcf8;
   --foreground: #060b14;
   --accent: #00858d;
+  --accent-foreground: #fcfcf8;
   --radius: 0.5rem;
   --card: #f6f6ee;
   --card-foreground: #060b14;
@@ -17,7 +18,6 @@
   --secondary-foreground: #060b14;
   --muted: #eaeff5;
   --muted-foreground: #4f5661;
-  --accent-foreground: #fcfcf8;
   --destructive: #ee343a;
   --destructive-foreground: #fcfcf8;
   --border: #d7dbe1;
@@ -29,6 +29,7 @@
   --background: #020204;
   --foreground: #efefe7;
   --accent: tomato;
+  --accent-foreground: #fcfcf8;
   --card: #040609;
   --card-foreground: #efefe7;
   --popover: #040609;
@@ -39,7 +40,6 @@
   --secondary-foreground: #efefe7;
   --muted: #0b0d12;
   --muted-foreground: #8b8f95;
-  --accent-foreground: #020204;
   --destructive: #ff4c4d;
   --destructive-foreground: #efefe7;
   --border: #13161b;
@@ -97,7 +97,7 @@
 
   /* Custom hover animations */
   .hover-lift {
-    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:shadow-primary/10;
+    @apply transition-all duration-300 hover:shadow-lg hover:scale-101 hover:shadow-primary/10;
   }
 
   .hover-glow {

@@ -10,7 +10,7 @@ interface AnimatedSectionProps {
   delay?: number
 }
 
-export function AnimatedSection({ children, className = "", delay = 0 }: AnimatedSectionProps) {
+export function AnimatedSection({ children, className = "", delay = 80 }: AnimatedSectionProps) {
   const [isVisible, setIsVisible] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
 
