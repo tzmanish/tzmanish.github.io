@@ -30,13 +30,14 @@ export function BackToTop() {
   return (
     <Button
       onClick={scrollToTop}
+      variant="ghost"
       size="icon"
-      className={`fixed bottom-4 right-4 z-40 rounded-full shadow-lg transition-all duration-300 button-hover-responsive${
+      className={`fixed bottom-4 right-4 z-40 w-9 h-9 rounded-md bg-background/60 backdrop-blur-sm border border-border/50 shadow-sm hover:shadow-md hover:bg-background/80 transition-all duration-300 ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4 pointer-events-none"
       }`}
       aria-label="Back to top"
     >
-      <ArrowUp className="w-4 h-4" />
+      <ArrowUp className="w-3.5 h-3.5" />
     </Button>
   )
 }

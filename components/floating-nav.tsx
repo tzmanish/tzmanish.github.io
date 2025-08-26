@@ -53,8 +53,8 @@ export function FloatingNav() {
         isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-4 pointer-events-none"
       }`}
     >
-      <div className="bg-background/80 backdrop-blur-sm border rounded-full p-2 shadow-lg">
-        <div className="flex flex-col gap-1">
+      <div className="bg-background/60 backdrop-blur-sm border border-border/50 rounded-md p-1.5 shadow-sm">
+        <div className="flex flex-col gap-0.5">
           {navItems.map((item) => {
             const Icon = item.icon
             return (
@@ -63,9 +63,9 @@ export function FloatingNav() {
                 variant="ghost"
                 size="icon"
                 onClick={() => scrollToSection(item.id)}
-                className={`w-10 h-10 rounded-full transition-all duration-200 ${
+                className={`w-8 h-8 rounded-sm transition-all duration-300 ${
                   activeSection === item.id
-                    ? "bg-primary text-primary-foreground shadow-md"
+                    ? "bg-primary text-primary-foreground shadow-sm"
                     : "hover:bg-muted text-muted-foreground hover:text-foreground"
                 }`}
                 title={item.label}

@@ -28,7 +28,7 @@ export default function Portfolio() {
             <div className="mb-8">
               <div className="flex justify-center mb-6">
                 <div className="w-20 h-20 hover:scale-110 transition-transform duration-300">
-                  <Logo/>
+                  <Logo />
                 </div>
               </div>
               <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-serif gradient-text">
@@ -52,38 +52,38 @@ export default function Portfolio() {
                   className="font-medium"
                 />
               </div>
-              <div className="flex justify-center gap-4 text-sm text-muted-foreground mb-8">
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors duration-300">
+              <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-sm text-muted-foreground mb-8">
+                <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                   <MapPin className="w-4 h-4 group-hover:text-foreground transition-colors duration-300" />
                   Bengaluru, India
                 </div>
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors duration-300">
+                <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                   <Mail className="w-4 h-4" />
                   <a href="mailto:tzmanish97@gmail.com" className="hover:underline">
                     tzmanish97@gmail.com
                   </a>
                 </div>
-                <div className="flex items-center gap-1 hover:text-foreground transition-colors duration-300">
+                <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                   <Phone className="w-4 h-4" />
                   <a href="tel:+919456522346" className="hover:underline">
                     +91 9456522346
                   </a>
                 </div>
               </div>
-              <div className="flex justify-center gap-4">
-                <Button variant="outline" size="lg" asChild className="hover-glow">
+              <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
+                <Button variant="outline" asChild className="hover-glow w-full sm:w-auto">
                   <a href="https://linkedin.com/in/tzman" target="_blank" rel="noopener noreferrer">
                     <Linkedin className="w-4 h-4 mr-2" />
                     LinkedIn
                   </a>
                 </Button>
-                <Button variant="outline" size="lg" asChild className="hover-glow">
+                <Button variant="outline" asChild className="hover-glow w-full sm:w-auto">
                   <a href="https://github.com/tzmanish" target="_blank" rel="noopener noreferrer">
                     <Github className="w-4 h-4 mr-2" />
                     GitHub
                   </a>
                 </Button>
-                <Button variant="default" size="lg" asChild className="hover-glow">
+                <Button variant="default" asChild className="hover-glow w-full sm:w-auto">
                   <a href="/resume-manish-kushwaha.pdf" download>
                     <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path
