@@ -118,19 +118,19 @@ export default function Portfolio() {
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-8 pt-8 border-t border-border">
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary">5+</div>
-                    <div className="text-sm text-muted-foreground">Years Experience</div>
+                    <div className="text-sm text-muted-foreground">Years of Experience</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">1.7B+</div>
-                    <div className="text-sm text-muted-foreground">Reports Processed</div>
+                    <div className="text-2xl font-bold text-primary">2</div>
+                    <div className="text-sm text-muted-foreground">Data Pipelines</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-primary">6</div>
+                    <div className="text-sm text-muted-foreground">Mentees</div>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl font-bold text-primary">58%</div>
                     <div className="text-sm text-muted-foreground">Cost Reduction</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-2xl font-bold text-primary">€2K</div>
-                    <div className="text-sm text-muted-foreground">Monthly Savings</div>
                   </div>
                 </div>
               </CardContent>
