@@ -495,7 +495,7 @@ export default function Portfolio() {
       </AnimatedSection>
 
       {/* Footer */}
-      <footer className="py-8 px-4 border-t bg-muted/20">
+      <footer className="py-8 px-4 border-t bg-muted/20 mb-10">
         <div className="max-w-4xl mx-auto">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-sm text-muted-foreground">
