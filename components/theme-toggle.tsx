@@ -22,7 +22,7 @@ export function ThemeToggle() {
       <Button
         variant="ghost"
         size="icon"
-        className={`fixed top-4 right-4 z-50 rounded-md bg-background/60 backdrop-blur-sm border border-border/50 shadow-sm ${
+        className={`absolute top-4 right-4 z-50 rounded-md bg-background border border-border shadow-sm ${
           isMobile 
             ? "w-10 h-10" // Larger touch target on mobile
             : "w-9 h-9"
@@ -39,7 +39,7 @@ export function ThemeToggle() {
       variant="ghost"
       size="icon"
       onClick={handleThemeChange}
-      className={`fixed top-4 right-4 z-50 rounded-md bg-background/60 backdrop-blur-sm border border-border/50 shadow-sm hover:shadow-md hover:bg-background/80 transition-all duration-300 ${
+      className={`absolute top-4 right-4 z-50 rounded-md bg-background border border-border shadow-sm hover:shadow-md hover:bg-muted transition-all duration-300 ${
         isMobile 
           ? "w-10 h-10 active:scale-95" // Larger touch target and active feedback on mobile
           : "w-9 h-9"

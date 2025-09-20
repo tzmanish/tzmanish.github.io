@@ -8,18 +8,16 @@ import { ThemeToggle } from "@/components/theme-toggle"
 import { ContactForm } from "@/components/contact-form"
 import { BlogSection } from "@/components/blog-section"
 import { ScrollProgress } from "@/components/scroll-progress"
-import { FloatingNav } from "@/components/floating-nav"
+import { Navbar } from "@/components/navbar"
 import { TypingAnimation } from "@/components/typing-animation"
-import { BackToTop } from "@/components/back-to-top"
 import { Logo } from "@/components/ui/logo"
 
 export default function Portfolio() {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background pb-20 md:pb-0">
       <ScrollProgress />
-      <FloatingNav />
+      <Navbar />
       <ThemeToggle />
-      <BackToTop />
 
       {/* Hero Section */}
       <AnimatedSection>
