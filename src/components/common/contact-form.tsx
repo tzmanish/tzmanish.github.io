@@ -3,45 +3,45 @@
 import type React from "react"
 
 import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Mail, Send, CheckCircle, AlertCircle } from "lucide-react"
+import { contactFormSchema, type ContactFormInput } from "@/types/contact-form"
 
 export function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle")
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+    reset,
+  } = useForm<ContactFormInput>({
+    resolver: zodResolver(contactFormSchema),
+    defaultValues: {
+      name: "",
+      email: "",
+      message: "",
+    },
+  })
 
+  const onSubmit = async (data: ContactFormInput) => {
     // Simulate form submission
     try {
+      console.log("Form data:", data)
       await new Promise((resolve) => setTimeout(resolve, 2000))
       setSubmitStatus("success")
-      setFormData({ name: "", email: "", subject: "", message: "" })
+      reset()
     } catch (error) {
       setSubmitStatus("error")
     } finally {
-      setIsSubmitting(false)
       setTimeout(() => setSubmitStatus("idle"), 5000)
     }
-  }
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData((prev) => ({
-      ...prev,
-      [e.target.name]: e.target.value,
-    }))
   }
 
   return (
@@ -56,58 +56,46 @@ export function ContactForm() {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit} className="space-y-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
+          <div className="space-y-4">
             <div className="space-y-2">
               <Label htmlFor="name">Name *</Label>
               <Input
                 id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                required
                 placeholder="Your full name"
                 className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                {...register("name")}
               />
+              {errors.name && (
+                <p className="text-sm text-red-600">{errors.name.message}</p>
+              )}
             </div>
             <div className="space-y-2">
               <Label htmlFor="email">Email *</Label>
               <Input
                 id="email"
-                name="email"
                 type="email"
-                value={formData.email}
-                onChange={handleChange}
-                required
                 placeholder="your.email@example.com"
                 className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
+                {...register("email")}
               />
+              {errors.email && (
+                <p className="text-sm text-red-600">{errors.email.message}</p>
+              )}
             </div>
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="subject">Subject *</Label>
-            <Input
-              id="subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              placeholder="What would you like to discuss?"
-              className="transition-all duration-200 focus:ring-2 focus:ring-primary/20"
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="message">Message *</Label>
-            <Textarea
-              id="message"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              placeholder="Tell me more about your project, opportunity, or question..."
-              rows={5}
-              className="transition-all duration-200 focus:ring-2 focus:ring-primary/20 resize-none"
-            />
+            <div className="space-y-2">
+              <Label htmlFor="message">Message *</Label>
+              <Textarea
+                id="message"
+                placeholder="Tell me more about your project, opportunity, or question..."
+                rows={5}
+                className="transition-all duration-200 focus:ring-2 focus:ring-primary/20 resize-none"
+                {...register("message")}
+              />
+              {errors.message && (
+                <p className="text-sm text-red-600">{errors.message.message}</p>
+              )}
+            </div>
           </div>
 
           {submitStatus === "success" && (
