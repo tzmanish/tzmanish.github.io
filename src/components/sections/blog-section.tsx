@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Calendar, Clock, ArrowRight, BookOpen } from "lucide-react"
 import { AnimatedSection } from "@/components/common/animated-section"
+import { formatDate } from "@/lib/date-utils"
 import type { BlogPost } from "@/types"
 
 const blogPosts: BlogPost[] = [
@@ -80,11 +81,7 @@ export function BlogSection() {
                 <div className="flex items-center gap-4 text-sm text-muted-foreground mt-4">
                   <div className="flex items-center gap-1">
                     <Calendar className="w-4 h-4" />
-                    {new Date(post.publishedAt).toLocaleDateString("en-US", {
-                      year: "numeric",
-                      month: "long",
-                      day: "numeric",
-                    })}
+                    {formatDate(post.publishedAt)}
                   </div>
                   <div className="flex items-center gap-1">
                     <Clock className="w-4 h-4" />
