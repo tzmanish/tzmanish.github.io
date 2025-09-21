@@ -22,4 +22,4 @@ export const contactFormSchema = z.object({
 })
 
 // Type inference from schema
-export type ContactFormInput = z.infer<typeof contactFormSchema>
+export type ContactFormData = z.infer<typeof contactFormSchema>

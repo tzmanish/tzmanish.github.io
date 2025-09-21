@@ -1,9 +1,12 @@
-import { Button } from "@/components/ui/button"
 import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react"
 import { AnimatedSection, TypingAnimation } from "@/components/common"
-import { Logo } from "@/components/ui/logo"
+import { Button, Logo } from "@/components/ui"
+import { ABOUT } from "@/constants"
 
 export function HeroSection() {
+  const linkedInProfile = ABOUT.socialProfiles.find(profile => profile.title === "LinkedIn")
+  const githubProfile = ABOUT.socialProfiles.find(profile => profile.title === "GitHub")
+  
   return (
     <AnimatedSection>
       <section id="hero" className="relative bg-gradient-to-br from-primary/5 to-accent/5 py-20 px-4">
@@ -15,57 +18,49 @@ export function HeroSection() {
               </div>
             </div>
             <h1 className="text-4xl md:text-5xl font-bold text-foreground mb-4 font-serif gradient-text">
-              Manish Kumar Kushwaha
+              {ABOUT.name}
             </h1>
             <div className="text-xl text-muted-foreground mb-6 h-8">
               <TypingAnimation
-                texts={[
-                  "Backend Software Engineer",
-                  "Java & Spring Boot Expert",
-                  "Distributed Systems Designer",
-                  "Cloud-Native Solutions Builder",
-                  "Video Game Enthusiast",
-                  "API Craftsman",
-                  "Code Whisperer",
-                  "Microservices Architect",
-                  "Bug Detective",
-                  "Scalable Systems Engineer",
-                  "Optimization Obsessed",
-                ]}
+                texts={ABOUT.titles}
                 className="font-medium"
               />
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-2 sm:gap-4 text-sm text-muted-foreground mb-8">
               <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                 <MapPin className="w-4 h-4 group-hover:text-foreground transition-colors duration-300" />
-                Bengaluru, India
+                {ABOUT.contact.location}
               </div>
               <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:hello@manishkushwaha.dev" className="hover:underline">
-                  hello@manishkushwaha.dev
+                <a href={ABOUT.contact.email.target} className="hover:underline">
+                  {ABOUT.contact.email.displayValue}
                 </a>
               </div>
               <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                 <Phone className="w-4 h-4" />
-                <a href="tel:+919456522346" className="hover:underline">
-                  +91 9456522346
+                <a href={ABOUT.contact.phone.target} className="hover:underline">
+                  {ABOUT.contact.phone.displayValue}
                 </a>
               </div>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-4">
-              <Button variant="outline" asChild className="hover-glow w-full sm:w-auto">
-                <a href="https://linkedin.com/in/tzman" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-4 h-4 mr-2" />
-                  LinkedIn
-                </a>
-              </Button>
-              <Button variant="outline" asChild className="hover-glow w-full sm:w-auto">
-                <a href="https://github.com/tzmanish" target="_blank" rel="noopener noreferrer">
-                  <Github className="w-4 h-4 mr-2" />
-                  GitHub
-                </a>
-              </Button>
+              {linkedInProfile && (
+                <Button variant="outline" asChild className="hover-glow w-full sm:w-auto">
+                  <a href={linkedInProfile.target} target="_blank" rel="noopener noreferrer">
+                    <Linkedin className="w-4 h-4 mr-2" />
+                    {linkedInProfile.title}
+                  </a>
+                </Button>
+              )}
+              {githubProfile && (
+                <Button variant="outline" asChild className="hover-glow w-full sm:w-auto">
+                  <a href={githubProfile.target} target="_blank" rel="noopener noreferrer">
+                    <Github className="w-4 h-4 mr-2" />
+                    {githubProfile.title}
+                  </a>
+                </Button>
+              )}
               <Button variant="default" asChild className="hover-glow w-full sm:w-auto">
                 <a href="/resume-manish-kushwaha.pdf" download>
                   <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
