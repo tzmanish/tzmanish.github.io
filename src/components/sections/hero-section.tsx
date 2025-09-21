@@ -42,8 +42,8 @@ export function HeroSection() {
               </div>
               <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:tzmanish97@gmail.com" className="hover:underline">
-                  tzmanish97@gmail.com
+                <a href="mailto:hello@manishkushwaha.dev" className="hover:underline">
+                  hello@manishkushwaha.dev
                 </a>
               </div>
               <div className="flex items-center justify-center gap-1 hover:text-foreground transition-colors duration-300">

@@ -16,9 +16,8 @@ export function ProjectsSection() {
             "Configured and deployed on dedicated Unix-based VPS with Nginx reverse proxy for improved performance",
             "Built comprehensive admin dashboard for donation tracking and user management",
           ]}
-          liveUrl="https://shivganga-demo.example.com"
-          githubUrl="https://github.com/tzmanish/shivganga-platform"
-          isHighlighted={true}
+          liveUrl="/not-found"
+          githubUrl="/not-found"
         />
 
         <ProjectCard
@@ -32,7 +31,7 @@ export function ProjectsSection() {
             "Implemented data quality controls ensuring 99.9% accuracy in financial reporting",
             "Led team of 5 developers in delivering multi-year compliance initiative",
           ]}
-          githubUrl="https://github.com/tzmanish/financial-reporting-suite"
+          githubUrl="/not-found"
         />
 
         <ProjectCard
@@ -46,8 +45,8 @@ export function ProjectsSection() {
             "Built configurable alerting system reducing incident response time by 60%",
             "Integrated with existing trading systems via REST APIs and message queues",
           ]}
-          liveUrl="https://trade-monitor-demo.example.com"
-          githubUrl="https://github.com/tzmanish/trade-lifecycle-monitor"
+          liveUrl="/not-found"
+          githubUrl="/not-found"
         />
       </div>
     </AnimatedSection>

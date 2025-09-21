@@ -30,6 +30,7 @@ Thumbs.db
 
 # TypeScript cache
 *.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # Misc
 coverage/
@@ -58,5 +59,6 @@ out/
 # Output of 'npm pack'
 *.tgz
 
-# Yarn Integrity file
+# Package manager lock files (keep only one)
 yarn.lock
+pnpm-lock.yaml

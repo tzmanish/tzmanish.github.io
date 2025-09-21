@@ -17,8 +17,8 @@ export function ContactSection() {
               <div>
                 <p className="font-medium">Email</p>
                 <p className="text-sm text-muted-foreground">
-                  <a href="mailto:tzmanish97@gmail.com" className="hover:text-primary transition-colors">
-                    tzmanish97@gmail.com
+                  <a href="mailto:hello@manishkushwaha.dev" className="hover:text-primary transition-colors">
+                    hello@manishkushwaha.dev
                   </a>
                 </p>
               </div>

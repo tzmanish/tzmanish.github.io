@@ -13,6 +13,7 @@ interface BlogPost {
   readTime: string
   tags: string[]
   slug: string
+  url: string
 }
 
 const blogPosts: BlogPost[] = [
@@ -24,6 +25,7 @@ const blogPosts: BlogPost[] = [
     readTime: "8 min read",
     tags: ["Spring Boot", "Performance", "Finance"],
     slug: "optimizing-spring-boot-financial-systems",
+    url: "/not-found",
   },
   {
     title: "Cost Optimization Strategies in Azure Cloud",
@@ -33,6 +35,7 @@ const blogPosts: BlogPost[] = [
     readTime: "6 min read",
     tags: ["Azure", "Cost Optimization", "DevOps"],
     slug: "azure-cost-optimization-strategies",
+    url: "/not-found",
   },
   {
     title: "Building Scalable Data Pipelines with Apache Spark",
@@ -42,6 +45,7 @@ const blogPosts: BlogPost[] = [
     readTime: "10 min read",
     tags: ["Apache Spark", "Big Data", "Architecture"],
     slug: "scalable-data-pipelines-spark",
+    url: "/not-found",
   },
   {
     title: "Mentoring Junior Developers: Lessons from 5 Years",
@@ -51,6 +55,7 @@ const blogPosts: BlogPost[] = [
     readTime: "5 min read",
     tags: ["Leadership", "Mentoring", "Career"],
     slug: "mentoring-junior-developers-lessons",
+    url: "/not-found",
   },
 ]
 
@@ -100,7 +105,12 @@ export function BlogSection() {
                       </Badge>
                     ))}
                   </div>
-                  <Button variant="ghost" size="sm" className="group-hover:text-primary transition-colors">
+                  <Button 
+                    variant="ghost" 
+                    size="sm" 
+                    className="group-hover:text-primary transition-colors"
+                    onClick={() => window.location.href = post.url}
+                  >
                     Read More
                     <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -111,7 +121,12 @@ export function BlogSection() {
         </div>
 
         <div className="text-center">
-          <Button variant="outline" size="lg" className="button-hover-responsivebg-transparent">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="button-hover-responsivebg-transparent"
+            onClick={() => window.location.href = '/not-found'}
+          >
             <BookOpen className="w-4 h-4 mr-2" />
             View All Articles
           </Button>
