@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo } from "react"
 import { useTheme } from "./theme-provider"
-import { Logo } from "./ui/logo"
+import { Logo } from "@/components/ui/logo"
 import { renderToStaticMarkup } from "react-dom/server"
 
 export function ThemeColorMeta() {

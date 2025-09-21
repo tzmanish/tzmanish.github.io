@@ -2,8 +2,7 @@ import type React from "react"
 import type { Metadata } from "next"
 import { Geist } from "next/font/google"
 import { Manrope } from "next/font/google"
-import { ThemeProvider } from "@/components/theme-provider"
-import { ThemeColorMeta } from "@/components/theme-color-meta"
+import { ThemeProvider, ThemeColorMeta } from "@/components/common"
 import "./globals.css"
 
 const geist = Geist({
